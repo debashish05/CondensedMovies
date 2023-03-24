@@ -74,5 +74,5 @@ if __name__ == '__main__':
     #]
 
     config = ConfigParser(args)
-    wandb.init(project="condensed movies",config=config,name="scene")
+    wandb.init(project="condensed movies",config=config,name="scene+discription")
     main(config)

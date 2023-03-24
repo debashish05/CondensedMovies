@@ -38,7 +38,6 @@
             "shuffle": true,
             "num_workers": 4,
             "label": "description",
-
             "experts_used": {
                 "characters": false,
                 "clip_name": false,
@@ -51,17 +50,17 @@
                 "s3d": false
             },
             "experts": {
-              "characters": "",
-              "clip_name": "BERT/bert-large-cased/clip_name/agg/agg.npy",
-              "context": "",
-              "description": "BERT/bert-large-cased/description/agg/agg_word.npy",
-              "face": "SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy",
-              "plot": "BERT/bert-large-cased/plot/agg/agg.npy",
-              "rgb": "SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy",
-              "scene": "DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy",
-              "speech": "BERT/bert-large-cased/speech/agg/agg.npy",
-              "video": "I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy",
-              "s3d": "S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy"
+                "characters": "",
+                "clip_name": "BERT/bert-large-cased/clip_name/agg/agg.npy",
+                "context": "",
+                "description": "BERT/bert-large-cased/description/agg/agg_word.npy",
+                "face": "SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy",
+                "plot": "BERT/bert-large-cased/plot/agg/agg.npy",
+                "rgb": "SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy",
+                "scene": "DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy",
+                "speech": "BERT/bert-large-cased/speech/agg/agg.npy",
+                "video": "I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy",
+                "s3d": "S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy"
             },
             "max_tokens": {
                 "description": 20,
@@ -74,7 +73,7 @@
     },
     "optimizer": {
         "type": "Adam",
-        "args":{
+        "args": {
             "lr": 0.0003,
             "weight_decay": 0,
             "amsgrad": true
@@ -82,7 +81,7 @@
     },
     "loss": {
         "type": "MaxMarginRankingLoss",
-        "args":{
+        "args": {
             "margin": 0.12132983763957966,
             "fix_norm": true
         }
@@ -91,7 +90,6 @@
         "t2v_metrics",
         "v2t_metrics"
     ],
-
     "lr_scheduler": {
         "type": "StepLR",
         "args": {

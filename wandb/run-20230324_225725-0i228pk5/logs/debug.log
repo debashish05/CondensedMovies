@@ -1,0 +1,38 @@
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Configure stats pid to 8762
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Loading settings from /home2/debashish.roy/.config/wandb/settings
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Loading settings from /ssd_scratch/cvit/debashish/CondensedMovies/wandb/settings
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-03-24 22:57:25,719 INFO    MainThread:8762 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:_log_setup():506] Logging user logs to /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230324_225725-0i228pk5/logs/debug.log
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:_log_setup():507] Logging internal logs to /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230324_225725-0i228pk5/logs/debug-internal.log
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:init():546] calling init triggers
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:init():553] wandb.init called with sweep_config: {}
+config: {'cfg_fname': PosixPath('configs/moe.json'), 'resume': None, '_config': OrderedDict([('name', 'MoEE'), ('n_gpu', 1), ('arch', OrderedDict([('type', 'MoEE'), ('args', OrderedDict([('pretrained', ''), ('projection_dim', 512), ('use_moe', False), ('aggregation_method', OrderedDict([('label', OrderedDict([('type', 'net_vlad'), ('cluster_size', 10), ('ghost_clusters', 0)])), ('description', OrderedDict([('type', 'net_vlad'), ('cluster_size', 10), ('ghost_clusters', 0)])), ('face', OrderedDict([('type', 'mean')])), ('speech', OrderedDict([('type', 'mean'), ('cluster_size', 0), ('ghost_clusters', 0)]))]))]))])), ('data_loader', OrderedDict([('type', 'MovieClipsDataLoader'), ('args', OrderedDict([('data_dir', 'data'), ('metadata_dir', 'data/metadata'), ('batch_size', 64), ('shuffle', True), ('num_workers', 4), ('label', 'description'), ('experts_used', OrderedDict([('characters', False), ('clip_name', False), ('description', True), ('face', False), ('rgb', False), ('scene', True), ('speech', False), ('video', False), ('s3d', False)])), ('experts', OrderedDict([('characters', ''), ('clip_name', 'BERT/bert-large-cased/clip_name/agg/agg.npy'), ('context', ''), ('description', 'BERT/bert-large-cased/description/agg/agg_word.npy'), ('face', 'SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy'), ('plot', 'BERT/bert-large-cased/plot/agg/agg.npy'), ('rgb', 'SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy'), ('scene', 'DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy'), ('speech', 'BERT/bert-large-cased/speech/agg/agg.npy'), ('video', 'I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy'), ('s3d', 'S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy')])), ('max_tokens', OrderedDict([('description', 20), ('characters', 10), ('face', 5), ('plot', 60), ('speech', 20)]))]))])), ('optimizer', OrderedDict([('type', 'Adam'), ('args', OrderedDict([('lr', 0.0003), ('weight_decay', 0), ('amsgrad', True)]))])), ('loss', OrderedDict([('type', 'MaxMarginRankingLoss'), ('args', OrderedDict([('margin', 0.12132983763957966), ('fix_norm', True)]))])), ('metrics', ['t2v_metrics', 'v2t_metrics']), ('lr_scheduler', OrderedDict([('type', 'StepLR'), ('args', OrderedDict([('step_size', 50), ('gamma', 0.1)]))])), ('trainer', OrderedDict([('epochs', 100), ('save_dir', 'saved'), ('save_period', 1), ('verbosity', 2), ('monitor', 'min val_loss'), ('early_stop', 4), ('tensorboard', False), ('retrieval', 'inter')]))]), '_save_dir': PosixPath('saved/models/MoEE/0324_225721'), '_log_dir': PosixPath('saved/log/MoEE/0324_225721'), 'log_levels': {0: 30, 1: 20, 2: 10}}
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:init():602] starting backend
+2023-03-24 22:57:25,720 INFO    MainThread:8762 [wandb_init.py:init():606] setting up manager
+2023-03-24 22:57:25,724 INFO    MainThread:8762 [backend.py:_multiprocessing_setup():108] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-03-24 22:57:25,732 INFO    MainThread:8762 [wandb_init.py:init():613] backend started and connected
+2023-03-24 22:57:25,734 INFO    MainThread:8762 [wandb_init.py:init():701] updated telemetry
+2023-03-24 22:57:25,760 INFO    MainThread:8762 [wandb_init.py:init():741] communicating run to backend with 60.0 second timeout
+2023-03-24 22:57:26,600 INFO    MainThread:8762 [wandb_run.py:_on_init():2133] communicating current version
+2023-03-24 22:57:26,798 INFO    MainThread:8762 [wandb_run.py:_on_init():2142] got version response 
+2023-03-24 22:57:26,798 INFO    MainThread:8762 [wandb_init.py:init():789] starting run threads in backend
+2023-03-24 22:57:41,407 WARNING MainThread:8762 [wandb_init.py:init():1165] interrupted
+Traceback (most recent call last):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 1144, in init
+    run = wi.init()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 801, in init
+    run_start_result = run_start_handle.wait(timeout=30)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/lib/mailbox.py", line 283, in wait
+    found, abandoned = self._slot._get_and_clear(timeout=wait_timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/lib/mailbox.py", line 130, in _get_and_clear
+    if self._wait(timeout=timeout):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/lib/mailbox.py", line 126, in _wait
+    return self._event.wait(timeout=timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/threading.py", line 552, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/threading.py", line 300, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2023-03-24 22:57:53,644 WARNING MsgRouterThr:8762 [router.py:message_loop():77] message_loop has been closed
