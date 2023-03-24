@@ -1,0 +1,34 @@
+<parse_config.ConfigParser object at 0x150cd660fc10>
+loading features >>> [Total: 0.4s] (gnode030:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 2.0% of system memory 1.6 GB/132.4 GB
+loading features >>> [Total: 8.6s] (gnode030:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.3s] (gnode030:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.4s] (gnode030:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.3% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.5s] (gnode030:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.4% of system memory 6.2 GB/127.8 GB
+loading features >>>
+Traceback (most recent call last):
+  File "train.py", line 79, in <module>
+    main(config)
+  File "train.py", line 19, in main
+    data_loader = config.initialize('data_loader', module_data)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/parse_config.py", line 85, in initialize
+    return getattr(module, module_name)(*args, **module_args)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/data_loader/data_loaders.py", line 13, in __init__
+    self.dataset = MovieClips(data_dir, metadata_dir, label, experts_used, experts, max_tokens, split)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/data_loader/MovieClips_dataset.py", line 36, in __init__
+    self._load_data()
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/data_loader/MovieClips_dataset.py", line 81, in _load_data
+    self.expert_data[expert] = memcache(data_pth)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/utils/util.py", line 46, in memcache
+    res = np_loader(path)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/utils/util.py", line 54, in np_loader
+    data = np.load(f, encoding="latin1", allow_pickle=True)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/numpy/lib/npyio.py", line 440, in load
+    pickle_kwargs=pickle_kwargs)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/numpy/lib/format.py", line 732, in read_array
+    array = pickle.load(fp, **pickle_kwargs)
+KeyboardInterrupt

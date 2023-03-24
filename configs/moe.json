@@ -41,10 +41,10 @@
 
             "experts_used": {
                 "characters": false,
-                "clip_name": false,
+                "clip_name": true,
                 "description": true,
-                "face": true,
-                "rgb": true,
+                "face": false,
+                "rgb": false,
                 "scene": true,
                 "speech": true,
                 "video": true,
@@ -75,7 +75,7 @@
     "optimizer": {
         "type": "Adam",
         "args":{
-            "lr": 0.001,
+            "lr": 0.0003,
             "weight_decay": 0,
             "amsgrad": true
         }

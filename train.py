@@ -9,6 +9,7 @@ from parse_config import ConfigParser
 from trainer import Trainer
 import ipdb
 import os
+import wandb
 
 def main(config):
     logger = config.get_logger('train')
@@ -73,4 +74,5 @@ if __name__ == '__main__':
     #]
 
     config = ConfigParser(args)
+    wandb.init(project="condensed movies",config=config,name="scene")
     main(config)

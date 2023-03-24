@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "train.py", line 77, in <module>
+    config = ConfigParser(args)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/parse_config.py", line 28, in __init__
+    config = self.load_config(self.cfg_fname)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/parse_config.py", line 63, in load_config
+    config = read_json(cfg_fname)
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/utils/util.py", line 21, in read_json
+    return json.load(handle, object_hook=OrderedDict)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/json/__init__.py", line 296, in load
+    parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/json/__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 47 column 31 (char 1317)

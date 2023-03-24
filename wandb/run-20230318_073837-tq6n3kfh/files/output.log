@@ -1,0 +1,228 @@
+<parse_config.ConfigParser object at 0x150b45713c50>
+loading features >>> [Total: 0.3s] (gnode030:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 2.0% of system memory 1.6 GB/132.4 GB
+loading features >>> [Total: 8.7s] (gnode030:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.2s] (gnode030:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.4s] (gnode030:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.3% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.5s] (gnode030:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.4% of system memory 6.2 GB/127.8 GB
+loading features >>> [Total: 5.0s] (gnode030:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 6.8% of system memory 8.1 GB/125.9 GB
+loading features >>> [Total: 0.3s] (gnode030:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 6.8% of system memory 8.1 GB/125.8 GB
+loading features >>> [Total: 0.3s] (gnode030:data/features/S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+train size: 24098 clips
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=7, bias=True)
+)
+Trainable parameters: 50398249
+Train Epoch: 0 [0/24098 (0%)] Loss: 0.121200
+Train Epoch: 0 [512/24098 (2%)] Loss: 0.121060
+Train Epoch: 0 [1024/24098 (4%)] Loss: 0.121228
+Train Epoch: 0 [1536/24098 (6%)] Loss: 0.121008
+Train Epoch: 0 [2048/24098 (8%)] Loss: 0.121472
+Train Epoch: 0 [2560/24098 (11%)] Loss: 0.121127
+Train Epoch: 0 [3072/24098 (13%)] Loss: 0.121244
+Train Epoch: 0 [3584/24098 (15%)] Loss: 0.121397
+Train Epoch: 0 [4096/24098 (17%)] Loss: 0.121338
+Train Epoch: 0 [4608/24098 (19%)] Loss: 0.121060
+Train Epoch: 0 [5120/24098 (21%)] Loss: 0.121211
+Train Epoch: 0 [5632/24098 (23%)] Loss: 0.121559
+Train Epoch: 0 [6144/24098 (25%)] Loss: 0.121317
+Train Epoch: 0 [6656/24098 (28%)] Loss: 0.121290
+Train Epoch: 0 [7168/24098 (30%)] Loss: 0.121402
+Train Epoch: 0 [7680/24098 (32%)] Loss: 0.121162
+Train Epoch: 0 [8192/24098 (34%)] Loss: 0.121318
+Train Epoch: 0 [8704/24098 (36%)] Loss: 0.121574
+Train Epoch: 0 [9216/24098 (38%)] Loss: 0.121162
+Train Epoch: 0 [9728/24098 (40%)] Loss: 0.121470
+Train Epoch: 0 [10240/24098 (42%)] Loss: 0.121290
+Train Epoch: 0 [10752/24098 (45%)] Loss: 0.120906
+Train Epoch: 0 [11264/24098 (47%)] Loss: 0.121200
+Train Epoch: 0 [11776/24098 (49%)] Loss: 0.121099
+Train Epoch: 0 [12288/24098 (51%)] Loss: 0.120734
+Train Epoch: 0 [12800/24098 (53%)] Loss: 0.121063
+Train Epoch: 0 [13312/24098 (55%)] Loss: 0.121380
+Train Epoch: 0 [13824/24098 (57%)] Loss: 0.121163
+Train Epoch: 0 [14336/24098 (59%)] Loss: 0.120938
+Train Epoch: 0 [14848/24098 (62%)] Loss: 0.121488
+Train Epoch: 0 [15360/24098 (64%)] Loss: 0.121810
+Train Epoch: 0 [15872/24098 (66%)] Loss: 0.121480
+Train Epoch: 0 [16384/24098 (68%)] Loss: 0.121153
+Train Epoch: 0 [16896/24098 (70%)] Loss: 0.120993
+Train Epoch: 0 [17408/24098 (72%)] Loss: 0.121368
+Train Epoch: 0 [17920/24098 (74%)] Loss: 0.120976
+Train Epoch: 0 [18432/24098 (76%)] Loss: 0.121091
+Train Epoch: 0 [18944/24098 (79%)] Loss: 0.120902
+Train Epoch: 0 [19456/24098 (81%)] Loss: 0.121058
+Train Epoch: 0 [19968/24098 (83%)] Loss: 0.121619
+Train Epoch: 0 [20480/24098 (85%)] Loss: 0.121380
+Train Epoch: 0 [20992/24098 (87%)] Loss: 0.121049
+Train Epoch: 0 [21504/24098 (89%)] Loss: 0.121194
+Train Epoch: 0 [22016/24098 (91%)] Loss: 0.121533
+Train Epoch: 0 [22528/24098 (93%)] Loss: 0.121225
+Train Epoch: 0 [23040/24098 (96%)] Loss: 0.120830
+Train Epoch: 0 [23552/24098 (98%)] Loss: 0.120883
+Train Epoch: 0 [24064/24098 (100%)] Loss: 0.121025
+[t2v_metrics]MovieClips epoch 0, R@1: 0.0, R@5: 0.1, R@10 0.2, R@50 1.2MedR: 1667.5, MeanR: 1678.0
+[v2t_metrics]MovieClips epoch 0, R@1: 0.0, R@5: 0.1, R@10 0.3, R@50 1.4MedR: 1656.5, MeanR: 1670.3
+    epoch          : 0
+    loss           : 0.12127555954203366
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.12131329625844955
+    val_t2v_metrics_R1: 0.0
+    val_t2v_metrics_R5: 0.11904761904761904
+    val_t2v_metrics_R10: 0.20833333333333334
+    val_t2v_metrics_R50: 1.2202380952380953
+    val_t2v_metrics_MedR: 1667.5
+    val_t2v_metrics_MeanR: 1677.9586309523809
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 0.0
+    val_v2t_metrics_R1: 0.02976190476190476
+    val_v2t_metrics_R5: 0.1488095238095238
+    val_v2t_metrics_R10: 0.3273809523809524
+    val_v2t_metrics_R50: 1.369047619047619
+    val_v2t_metrics_MedR: 1656.5
+    val_v2t_metrics_MeanR: 1670.315625
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 0.11318310895123185
+Saving checkpoint: saved/models/MoEE/0318_073844/checkpoint-epoch0.pth ...
+/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/scipy/stats/stats.py:275: RuntimeWarning: divide by zero encountered in log
+  log_a = np.log(np.array(a, dtype=dtype))
+/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+Saving current best: model_best.pth ...

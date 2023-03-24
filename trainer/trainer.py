@@ -54,7 +54,10 @@ class Trainer(BaseTrainer):
 
             The metrics in log must have the key 'metrics'.
         """
-        self.model.train()
+        if epoch==1:
+            self.model.eval()
+        else:
+            self.model.train()
 
         total_loss = 0
         total_metrics = np.zeros(len(self.metrics))
@@ -65,11 +68,13 @@ class Trainer(BaseTrainer):
                     minibatch[expert][key] = val.to(self.device)
 
             self.optimizer.zero_grad()
-            with autograd.detect_anomaly():
-                output = self.model(minibatch)
-                loss = self.loss(output)
+            output = self.model(minibatch)
+            loss = self.loss(output)
+            
+            if epoch!=1:
                 loss.backward()
-            self.optimizer.step()
+                self.optimizer.step()
+
             self.writer.set_step((epoch - 1) * self.len_epoch + batch_idx)
             self.writer.add_scalar('loss', loss.item())
             total_loss += loss.item()
@@ -94,7 +99,7 @@ class Trainer(BaseTrainer):
             val_log = self._valid_epoch(epoch)
             log.update(val_log)
 
-        if self.lr_scheduler is not None:
+        if self.lr_scheduler is not None and epoch!=1:
             self.lr_scheduler.step()
 
         return log

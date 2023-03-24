@@ -1,0 +1,611 @@
+2023-03-18 07:44:59,339 INFO    StreamThr :33678 [internal.py:wandb_internal():90] W&B internal server running at pid: 33678, started at: 2023-03-18 07:44:59.338417
+2023-03-18 07:44:59,341 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status
+2023-03-18 07:44:59,343 INFO    WriterThread:33678 [datastore.py:open_for_write():85] open: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/run-mtfh2cur.wandb
+2023-03-18 07:44:59,347 DEBUG   SenderThread:33678 [sender.py:send():336] send: header
+2023-03-18 07:44:59,370 DEBUG   SenderThread:33678 [sender.py:send():336] send: run
+2023-03-18 07:45:00,155 INFO    SenderThread:33678 [dir_watcher.py:__init__():219] watching files in: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files
+2023-03-18 07:45:00,155 INFO    SenderThread:33678 [sender.py:_start_run_threads():1081] run started: mtfh2cur with start time 1679105699.338245
+2023-03-18 07:45:00,155 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:45:00,156 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:45:00,158 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: check_version
+2023-03-18 07:45:00,158 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: check_version
+2023-03-18 07:45:00,298 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: run_start
+2023-03-18 07:45:00,822 DEBUG   HandlerThread:33678 [system_info.py:__init__():31] System info init
+2023-03-18 07:45:00,822 DEBUG   HandlerThread:33678 [system_info.py:__init__():46] System info init done
+2023-03-18 07:45:00,822 INFO    HandlerThread:33678 [system_monitor.py:start():183] Starting system monitor
+2023-03-18 07:45:00,822 INFO    SystemMonitor:33678 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-03-18 07:45:00,822 INFO    HandlerThread:33678 [system_monitor.py:probe():204] Collecting system info
+2023-03-18 07:45:00,823 INFO    SystemMonitor:33678 [interfaces.py:start():187] Started cpu monitoring
+2023-03-18 07:45:00,824 INFO    SystemMonitor:33678 [interfaces.py:start():187] Started disk monitoring
+2023-03-18 07:45:00,825 INFO    SystemMonitor:33678 [interfaces.py:start():187] Started gpu monitoring
+2023-03-18 07:45:00,826 INFO    SystemMonitor:33678 [interfaces.py:start():187] Started memory monitoring
+2023-03-18 07:45:00,827 INFO    SystemMonitor:33678 [interfaces.py:start():187] Started network monitoring
+2023-03-18 07:45:01,157 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:45:01,644 DEBUG   HandlerThread:33678 [system_info.py:probe():195] Probing system
+2023-03-18 07:45:01,645 DEBUG   HandlerThread:33678 [system_info.py:_probe_git():180] Probing git
+2023-03-18 07:45:01,665 DEBUG   HandlerThread:33678 [system_info.py:_probe_git():188] Probing git done
+2023-03-18 07:45:01,665 DEBUG   HandlerThread:33678 [system_info.py:probe():240] Probing system done
+2023-03-18 07:45:01,665 DEBUG   HandlerThread:33678 [system_monitor.py:probe():213] {'os': 'Linux-4.15.0-202-generic-x86_64-with-debian-buster-sid', 'python': '3.7.10', 'heartbeatAt': '2023-03-18T02:15:01.644668', 'startedAt': '2023-03-18T02:14:59.324332', 'docker': None, 'cuda': None, 'args': ('configs/moe.json',), 'state': 'running', 'program': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/m-bain/CondensedMovies.git', 'commit': 'c4f0c35a34b8b2cf2f3f54fa37000d0fb275685b'}, 'email': None, 'root': '/ssd_scratch/cvit/debashish/CondensedMovies', 'host': 'gnode030', 'username': 'debashish.roy', 'executable': '/home2/debashish.roy/miniconda3/envs/IS/bin/python', 'cpu_count': 20, 'cpu_count_logical': 40, 'cpu_freq': {'current': 1266.4976500000002, 'min': 1200.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 1297.093, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.702, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.163, 'min': 1200.0, 'max': 3400.0}, {'current': 1536.41, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.287, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.579, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.668, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.652, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.419, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.417, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.429, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.606, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.882, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.105, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.925, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.19, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.413, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.455, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.451, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.63, 'min': 1200.0, 'max': 3400.0}, {'current': 1215.826, 'min': 1200.0, 'max': 3400.0}, {'current': 1211.197, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.957, 'min': 1200.0, 'max': 3400.0}, {'current': 1208.58, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.389, 'min': 1200.0, 'max': 3400.0}, {'current': 1420.925, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.363, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.643, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.924, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.163, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.146, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.69, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.844, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.414, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.261, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.524, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.247, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.41, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.955, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.11, 'min': 1200.0, 'max': 3400.0}], 'disk': {'total': 136.48257064819336, 'used': 70.42796325683594}, 'gpu': 'NVIDIA GeForce GTX 1080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.78692626953125}}
+2023-03-18 07:45:01,665 INFO    HandlerThread:33678 [system_monitor.py:probe():214] Finished collecting system info
+2023-03-18 07:45:01,665 INFO    HandlerThread:33678 [system_monitor.py:probe():217] Publishing system info
+2023-03-18 07:45:01,666 DEBUG   HandlerThread:33678 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-03-18 07:45:01,666 DEBUG   HandlerThread:33678 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-18 07:45:01,667 DEBUG   HandlerThread:33678 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-03-18 07:45:02,155 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/requirements.txt
+2023-03-18 07:45:02,165 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/conda-environment.yaml
+2023-03-18 07:45:06,286 DEBUG   HandlerThread:33678 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-18 07:45:06,288 INFO    HandlerThread:33678 [system_monitor.py:probe():219] Finished publishing system info
+2023-03-18 07:45:06,296 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:06,296 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-18 07:45:06,297 DEBUG   SenderThread:33678 [sender.py:send():336] send: files
+2023-03-18 07:45:06,297 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-03-18 07:45:06,307 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:45:06,307 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:45:06,703 DEBUG   SenderThread:33678 [sender.py:send():336] send: telemetry
+2023-03-18 07:45:07,158 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/conda-environment.yaml
+2023-03-18 07:45:07,158 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-metadata.json
+2023-03-18 07:45:07,158 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:07,399 INFO    wandb-upload_0:33678 [upload_job.py:push():138] Uploaded file /tmp/tmpob8hvrwnwandb/utjjf7u9-wandb-metadata.json
+2023-03-18 07:45:09,159 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:10,804 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:16,246 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:17,163 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:19,164 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:21,249 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:21,308 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:45:21,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:45:23,167 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:25,168 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:26,508 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:29,169 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:31,170 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:31,621 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:32,171 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/config.yaml
+2023-03-18 07:45:33,171 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:35,172 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:36,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:45:36,310 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:45:37,656 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:40,798 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:45:40,803 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:45:40,804 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:45:40,809 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:45:41,175 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:45:41,175 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:43,176 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:43,310 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:45,177 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:47,178 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:48,726 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:49,179 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:51,180 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:51,307 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:45:51,307 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:45:53,181 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:54,120 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:45:55,182 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:57,183 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:59,184 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:45:59,318 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:00,827 DEBUG   SystemMonitor:33678 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-03-18 07:46:00,830 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:46:01,184 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:03,185 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:04,606 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:05,186 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:06,307 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:46:06,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:46:07,187 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:09,188 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:09,879 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:11,188 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:13,189 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:15,144 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:15,190 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:17,191 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:19,192 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:20,343 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:21,192 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:21,308 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:46:21,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:46:23,193 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:25,194 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:25,675 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:30,408 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:46:30,410 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:46:30,410 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:46:30,416 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:46:30,832 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:46:30,833 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:31,197 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:46:31,198 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:33,198 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:36,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:46:36,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:46:36,662 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:37,200 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:39,201 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:41,202 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:42,147 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:43,202 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:45,203 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:47,204 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:47,916 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:49,205 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:51,206 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:51,308 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:46:51,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:46:53,206 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:53,615 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:55,207 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:57,208 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:46:58,840 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:46:59,209 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:00,833 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:47:01,210 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:03,211 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:04,701 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:05,211 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:06,308 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:47:06,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:47:07,213 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:09,213 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:09,921 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:11,214 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:13,215 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:15,139 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:15,216 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:17,217 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:21,003 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:21,308 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:47:21,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:47:23,059 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:47:23,062 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:47:23,062 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:47:23,069 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:47:23,220 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:47:23,221 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:25,222 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:26,516 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:29,223 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:30,834 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:47:31,224 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:32,094 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:33,225 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:35,225 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:36,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:47:36,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:47:37,226 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:37,798 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:39,227 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:41,228 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:43,228 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:43,516 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:45,229 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:47,230 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:49,204 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:49,230 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:51,231 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:51,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:47:51,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:47:53,232 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:54,215 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:47:55,233 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:57,234 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:59,235 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:47:59,478 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:00,836 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:48:01,236 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:03,237 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:04,724 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:05,238 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:06,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:48:06,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:48:07,238 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:09,239 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:10,190 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:15,140 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:48:15,142 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:48:15,143 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:48:15,148 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:48:15,242 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:48:15,243 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:16,149 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:17,243 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:21,245 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:21,303 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:21,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:48:21,309 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:48:23,246 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:25,247 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:26,537 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:27,248 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:29,249 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:30,837 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:48:31,250 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:31,693 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:33,251 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:35,252 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:36,310 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:48:36,310 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:48:36,838 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:37,253 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:39,253 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:41,254 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:41,981 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:43,255 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:45,256 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:47,117 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:47,257 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:49,258 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:51,258 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:51,309 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:48:51,310 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:48:52,286 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:48:53,259 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:55,260 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:57,261 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:48:58,209 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:00,838 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:49:02,079 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:49:02,081 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:49:02,081 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:49:02,082 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:49:02,264 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:49:03,264 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:03,532 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:06,266 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:06,310 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:49:06,324 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:49:08,267 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:09,150 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:10,268 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:12,269 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:14,270 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:14,555 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:16,271 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:18,272 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:19,970 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:20,273 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:21,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:49:21,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:49:22,274 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:24,275 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:25,769 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:26,277 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:28,278 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:30,279 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:30,839 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:49:30,840 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:32,280 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:34,281 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:36,282 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:36,310 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:49:36,311 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:49:36,651 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:38,283 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:40,284 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:41,701 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:42,285 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:44,286 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:46,287 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:46,935 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:48,288 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:51,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:49:51,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:49:52,654 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:53,864 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:49:53,866 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:49:53,867 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:49:53,868 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:49:54,291 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:49:54,291 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:56,292 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:49:57,883 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:49:58,292 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:00,293 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:00,841 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:50:02,294 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:03,007 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:04,295 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:06,296 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:06,310 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:50:06,311 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:50:08,041 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:08,297 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:10,297 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:12,298 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:13,854 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:14,300 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:16,301 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:18,301 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:19,645 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:20,302 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:21,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:50:21,311 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:50:22,303 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:24,305 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:25,298 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:26,305 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:28,306 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:30,307 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:30,664 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:30,843 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:50:32,308 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:34,309 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:36,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:50:36,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:50:36,654 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:40,173 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:50:40,176 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:50:40,176 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:50:40,177 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:50:40,312 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:50:42,313 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:42,419 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:44,314 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:46,315 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:48,213 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:48,315 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:50,316 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:51,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:50:51,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:50:52,319 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:53,525 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:50:54,319 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:56,320 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:58,321 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:50:58,816 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:00,321 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:00,844 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:51:02,322 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:04,221 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:04,323 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:06,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:51:06,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:51:06,324 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:08,325 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:09,669 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:10,326 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:12,326 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:14,328 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:15,124 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:16,328 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:18,329 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:20,330 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:20,574 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:21,311 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:51:21,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:51:22,331 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:24,332 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:26,143 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:26,333 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:30,845 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:51:31,087 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:51:31,090 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:51:31,090 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:51:31,091 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:51:31,335 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:51:32,092 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:32,335 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:34,336 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:36,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:51:36,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:51:36,337 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:37,640 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:38,338 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:40,339 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:42,340 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:42,957 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:44,341 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:46,342 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:48,274 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:48,343 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:50,344 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:51,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:51:51,312 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:51:52,346 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:53,570 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:51:54,347 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:56,348 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:58,349 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:51:58,877 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:00,350 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:00,847 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:52:02,351 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:04,149 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:04,352 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:06,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:52:06,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:52:06,353 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:08,354 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:09,378 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:10,355 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:12,356 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:14,357 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:14,543 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:16,358 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:19,544 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:21,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:52:21,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:52:21,403 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:52:21,661 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:52:21,662 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:52:21,663 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:52:22,361 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:52:22,361 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:24,362 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:25,390 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:26,363 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:28,364 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:30,365 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:30,583 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:30,848 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:52:32,366 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:34,367 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:36,313 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:52:36,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:52:36,368 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:36,655 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:38,369 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:40,370 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:41,812 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:42,371 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:44,372 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:46,373 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:47,156 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:48,374 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:50,375 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:51,312 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:52:51,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:52:52,376 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:52,501 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:54,377 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:56,378 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:52:57,848 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:52:58,379 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:00,379 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:00,850 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:53:02,380 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:03,175 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:53:04,381 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:06,313 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:53:06,313 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:53:06,382 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:08,653 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:53:11,845 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:53:11,847 DEBUG   SenderThread:33678 [sender.py:send():336] send: history
+2023-03-18 07:53:11,848 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:53:11,849 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:53:11,862 DEBUG   SenderThread:33678 [sender.py:send():336] send: exit
+2023-03-18 07:53:11,862 INFO    SenderThread:33678 [sender.py:send_exit():559] handling exit code: 0
+2023-03-18 07:53:11,863 INFO    SenderThread:33678 [sender.py:send_exit():561] handling runtime: 491
+2023-03-18 07:53:11,863 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:53:11,864 INFO    SenderThread:33678 [sender.py:send_exit():567] send defer
+2023-03-18 07:53:11,864 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,864 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-18 07:53:11,865 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,865 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-18 07:53:11,865 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 1
+2023-03-18 07:53:11,865 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,865 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-18 07:53:11,866 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,866 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-18 07:53:11,866 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 2
+2023-03-18 07:53:11,866 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,866 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-18 07:53:11,866 INFO    HandlerThread:33678 [system_monitor.py:finish():193] Stopping system monitor
+2023-03-18 07:53:11,868 DEBUG   SystemMonitor:33678 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-03-18 07:53:11,869 INFO    HandlerThread:33678 [interfaces.py:finish():199] Joined cpu monitor
+2023-03-18 07:53:11,869 DEBUG   SystemMonitor:33678 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-03-18 07:53:11,869 INFO    HandlerThread:33678 [interfaces.py:finish():199] Joined disk monitor
+2023-03-18 07:53:11,941 INFO    HandlerThread:33678 [interfaces.py:finish():199] Joined gpu monitor
+2023-03-18 07:53:11,942 INFO    HandlerThread:33678 [interfaces.py:finish():199] Joined memory monitor
+2023-03-18 07:53:11,942 INFO    HandlerThread:33678 [interfaces.py:finish():199] Joined network monitor
+2023-03-18 07:53:11,943 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,943 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-18 07:53:11,943 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 3
+2023-03-18 07:53:11,943 DEBUG   SenderThread:33678 [sender.py:send():336] send: stats
+2023-03-18 07:53:11,943 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,944 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-18 07:53:11,944 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,944 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-18 07:53:11,944 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 4
+2023-03-18 07:53:11,945 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,945 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-18 07:53:11,945 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,945 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-18 07:53:11,945 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 5
+2023-03-18 07:53:11,946 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,946 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-18 07:53:11,947 DEBUG   SenderThread:33678 [sender.py:send():336] send: summary
+2023-03-18 07:53:11,947 INFO    SenderThread:33678 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:53:11,948 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,948 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-18 07:53:11,948 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 6
+2023-03-18 07:53:11,948 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,948 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-18 07:53:11,949 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,949 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-18 07:53:11,949 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 7
+2023-03-18 07:53:11,949 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:53:11,949 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:11,950 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-18 07:53:11,950 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:11,950 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-18 07:53:12,385 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:53:12,385 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:12,863 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 07:53:14,386 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:15,274 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 8
+2023-03-18 07:53:15,274 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 07:53:15,274 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:15,275 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-18 07:53:15,275 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:15,275 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-18 07:53:15,336 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 9
+2023-03-18 07:53:15,337 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:15,337 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-18 07:53:15,337 DEBUG   SenderThread:33678 [sender.py:send():336] send: artifact
+2023-03-18 07:53:15,386 INFO    Thread-13 :33678 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:17,132 INFO    SenderThread:33678 [sender.py:send_artifact():1428] sent artifact job-https___github.com_m-bain_CondensedMovies.git_train.py - {'id': 'QXJ0aWZhY3Q6NDAwMTk5MTY0', 'digest': '953df6e943073273a9425c134331d259', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_m-bain_CondensedMovies.git_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_m-bain_CondensedMovies.git_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU3NjcxODM4', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDAwMjA4NjM1', 'versionIndex': 1}}, 'version': 'v0'}
+2023-03-18 07:53:17,132 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:17,132 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-18 07:53:17,132 INFO    SenderThread:33678 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-03-18 07:53:17,388 INFO    SenderThread:33678 [dir_watcher.py:finish():395] scan: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files
+2023-03-18 07:53:17,389 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log output.log
+2023-03-18 07:53:17,389 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-metadata.json wandb-metadata.json
+2023-03-18 07:53:17,389 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json wandb-summary.json
+2023-03-18 07:53:17,400 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/requirements.txt requirements.txt
+2023-03-18 07:53:17,401 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/config.yaml config.yaml
+2023-03-18 07:53:17,401 INFO    SenderThread:33678 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/conda-environment.yaml conda-environment.yaml
+2023-03-18 07:53:17,402 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 10
+2023-03-18 07:53:17,413 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:17,413 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-18 07:53:17,440 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:17,440 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-18 07:53:17,441 INFO    SenderThread:33678 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 07:53:17,864 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-18 07:53:18,297 INFO    wandb-upload_1:33678 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/output.log
+2023-03-18 07:53:18,396 INFO    wandb-upload_2:33678 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/wandb-summary.json
+2023-03-18 07:53:18,464 INFO    wandb-upload_4:33678 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/config.yaml
+2023-03-18 07:53:18,466 INFO    wandb-upload_0:33678 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/conda-environment.yaml
+2023-03-18 07:53:18,467 INFO    wandb-upload_3:33678 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/files/requirements.txt
+2023-03-18 07:53:18,668 INFO    Thread-12 :33678 [sender.py:transition_state():587] send defer: 11
+2023-03-18 07:53:18,668 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:18,668 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-18 07:53:18,669 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:18,669 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-18 07:53:18,669 INFO    SenderThread:33678 [file_pusher.py:join():169] waiting for file pusher
+2023-03-18 07:53:18,669 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 12
+2023-03-18 07:53:18,670 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:18,670 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-18 07:53:18,670 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:18,671 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-18 07:53:19,634 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 13
+2023-03-18 07:53:19,635 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:19,635 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-18 07:53:19,635 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:19,635 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-18 07:53:19,636 INFO    SenderThread:33678 [sender.py:transition_state():587] send defer: 14
+2023-03-18 07:53:19,637 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:53:19,637 INFO    HandlerThread:33678 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-18 07:53:19,637 DEBUG   SenderThread:33678 [sender.py:send():336] send: final
+2023-03-18 07:53:19,638 DEBUG   SenderThread:33678 [sender.py:send():336] send: footer
+2023-03-18 07:53:19,638 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:53:19,638 INFO    SenderThread:33678 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-18 07:53:19,639 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 07:53:19,640 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 07:53:19,640 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: server_info
+2023-03-18 07:53:19,641 DEBUG   SenderThread:33678 [sender.py:send_request():363] send_request: server_info
+2023-03-18 07:53:19,648 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-18 07:53:19,650 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-18 07:53:19,983 INFO    MainThread:33678 [wandb_run.py:_footer_history_summary_info():3422] rendering history
+2023-03-18 07:53:19,985 INFO    MainThread:33678 [wandb_run.py:_footer_history_summary_info():3454] rendering summary
+2023-03-18 07:53:19,986 INFO    MainThread:33678 [wandb_run.py:_footer_sync_info():3380] logging synced files
+2023-03-18 07:53:19,986 DEBUG   HandlerThread:33678 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-18 07:53:19,987 INFO    HandlerThread:33678 [handler.py:finish():842] shutting down handler
+2023-03-18 07:53:20,641 INFO    WriterThread:33678 [datastore.py:close():298] close: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_074459-mtfh2cur/run-mtfh2cur.wandb
+2023-03-18 07:53:20,983 INFO    SenderThread:33678 [sender.py:finish():1504] shutting down sender
+2023-03-18 07:53:20,983 INFO    SenderThread:33678 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 07:53:20,984 INFO    SenderThread:33678 [file_pusher.py:join():169] waiting for file pusher

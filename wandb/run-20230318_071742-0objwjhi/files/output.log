@@ -1,0 +1,241 @@
+<parse_config.ConfigParser object at 0x14affdfc4d90>
+loading features >>> [Total: 0.3s] (gnode030:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 2.0% of system memory 1.6 GB/132.4 GB
+loading features >>> [Total: 8.6s] (gnode030:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.2s] (gnode030:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 5.2% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.4s] (gnode030:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.3% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 0.5s] (gnode030:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.4% of system memory 6.2 GB/127.8 GB
+loading features >>> [Total: 5.0s] (gnode030:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 6.8% of system memory 8.1 GB/125.9 GB
+loading features >>> [Total: 0.3s] (gnode030:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 6.8% of system memory 8.1 GB/125.8 GB
+loading features >>> [Total: 0.3s] (gnode030:data/features/S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 6.9% of system memory 8.2 GB/125.8 GB
+train size: 24098 clips
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+>>> Currently using 6.9% of system memory 8.2 GB/125.7 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(1, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=7, bias=True)
+)
+Trainable parameters: 50398249
+/ssd_scratch/cvit/debashish/CondensedMovies/trainer/trainer.py:68: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+  with autograd.detect_anomaly():
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.121279
+Train Epoch: 1 [512/24098 (2%)] Loss: 0.082876
+Train Epoch: 1 [1024/24098 (4%)] Loss: 0.052658
+Train Epoch: 1 [1536/24098 (6%)] Loss: 0.058133
+Train Epoch: 1 [2048/24098 (8%)] Loss: 0.049938
+Train Epoch: 1 [2560/24098 (11%)] Loss: 0.030888
+Train Epoch: 1 [3072/24098 (13%)] Loss: 0.034875
+Train Epoch: 1 [3584/24098 (15%)] Loss: 0.033334
+Train Epoch: 1 [4096/24098 (17%)] Loss: 0.035739
+Train Epoch: 1 [4608/24098 (19%)] Loss: 0.030407
+Train Epoch: 1 [5120/24098 (21%)] Loss: 0.028604
+Train Epoch: 1 [5632/24098 (23%)] Loss: 0.028539
+Train Epoch: 1 [6144/24098 (25%)] Loss: 0.020431
+Train Epoch: 1 [6656/24098 (28%)] Loss: 0.019749
+Train Epoch: 1 [7168/24098 (30%)] Loss: 0.022799
+Train Epoch: 1 [7680/24098 (32%)] Loss: 0.016310
+Train Epoch: 1 [8192/24098 (34%)] Loss: 0.017680
+Train Epoch: 1 [8704/24098 (36%)] Loss: 0.016321
+Train Epoch: 1 [9216/24098 (38%)] Loss: 0.017891
+Train Epoch: 1 [9728/24098 (40%)] Loss: 0.016745
+Train Epoch: 1 [10240/24098 (42%)] Loss: 0.018209
+Train Epoch: 1 [10752/24098 (45%)] Loss: 0.026590
+Train Epoch: 1 [11264/24098 (47%)] Loss: 0.014150
+Train Epoch: 1 [11776/24098 (49%)] Loss: 0.015655
+Train Epoch: 1 [12288/24098 (51%)] Loss: 0.018310
+Train Epoch: 1 [12800/24098 (53%)] Loss: 0.019739
+Train Epoch: 1 [13312/24098 (55%)] Loss: 0.016342
+Train Epoch: 1 [13824/24098 (57%)] Loss: 0.012164
+Train Epoch: 1 [14336/24098 (59%)] Loss: 0.023240
+Train Epoch: 1 [14848/24098 (62%)] Loss: 0.028785
+Train Epoch: 1 [15360/24098 (64%)] Loss: 0.017879
+Train Epoch: 1 [15872/24098 (66%)] Loss: 0.015754
+Train Epoch: 1 [16384/24098 (68%)] Loss: 0.011503
+Train Epoch: 1 [16896/24098 (70%)] Loss: 0.024438
+Train Epoch: 1 [17408/24098 (72%)] Loss: 0.014844
+Train Epoch: 1 [17920/24098 (74%)] Loss: 0.015828
+Train Epoch: 1 [18432/24098 (76%)] Loss: 0.010013
+Train Epoch: 1 [18944/24098 (79%)] Loss: 0.015487
+Train Epoch: 1 [19456/24098 (81%)] Loss: 0.013470
+Train Epoch: 1 [19968/24098 (83%)] Loss: 0.014504
+Train Epoch: 1 [20480/24098 (85%)] Loss: 0.017796
+Train Epoch: 1 [20992/24098 (87%)] Loss: 0.016203
+Train Epoch: 1 [21504/24098 (89%)] Loss: 0.014373
+Train Epoch: 1 [22016/24098 (91%)] Loss: 0.018412
+Train Epoch: 1 [22528/24098 (93%)] Loss: 0.013380
+Train Epoch: 1 [23040/24098 (96%)] Loss: 0.009477
+Train Epoch: 1 [23552/24098 (98%)] Loss: 0.012253
+Train Epoch: 1 [24064/24098 (100%)] Loss: 0.012544
+[t2v_metrics]MovieClips epoch 1, R@1: 4.3, R@5: 15.4, R@10 23.0, R@50 49.0MedR: 53, MeanR: 168.8
+[v2t_metrics]MovieClips epoch 1, R@1: 6.8, R@5: 19.4, R@10 28.4, R@50 54.6MedR: 38, MeanR: 146.5
+    epoch          : 1
+    loss           : 0.02348263365579695
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.016384249553084373
+    val_t2v_metrics_R1: 4.345238095238095
+    val_t2v_metrics_R5: 15.446428571428571
+    val_t2v_metrics_R10: 22.976190476190474
+    val_t2v_metrics_R50: 49.04761904761905
+    val_t2v_metrics_MedR: 53.0
+    val_t2v_metrics_MeanR: 168.8044642857143
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 11.553313566110937
+    val_v2t_metrics_R1: 6.815476190476191
+    val_v2t_metrics_R5: 19.43452380952381
+    val_v2t_metrics_R10: 28.422619047619047
+    val_v2t_metrics_R50: 54.583333333333336
+    val_v2t_metrics_MedR: 38.0
+    val_v2t_metrics_MeanR: 146.54642857142858
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 15.556482365455308
+Saving checkpoint: saved/models/MoEE/0318_071750/checkpoint-epoch1.pth ...
+Saving current best: model_best.pth ...
+[34m[1mwandb[39m[22m: [32m[41mERROR[39m[49m Expected `data_table` to be `wandb.Table` type, instead got dict
+Traceback (most recent call last):
+  File "train.py", line 79, in <module>
+    main(config)
+  File "train.py", line 48, in main
+    trainer.train()
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/base/base_trainer.py", line 129, in train
+    wandb.log({"plot": wandb.plot.line({"train": train_loss_, "validation": val_loss_,"x":x},x="x",y=["train", "validation"],title="Loss")})
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/plot/line.py", line 33, in line
+    "wandb/line/v0", table, {"x": x, "y": y, "stroke": stroke}, {"title": title}
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1929, in plot_table
+    return custom_chart(vega_spec_name, data_table, fields, string_fields or {})
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/wandb/viz.py", line 102, in custom_chart
+    f"Expected `data_table` to be `wandb.Table` type, instead got {type(data_table).__name__}"
+wandb.errors.Error: Expected `data_table` to be `wandb.Table` type, instead got dict

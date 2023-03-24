@@ -1,0 +1,238 @@
+2023-03-18 07:12:17,136 INFO    StreamThr :31434 [internal.py:wandb_internal():90] W&B internal server running at pid: 31434, started at: 2023-03-18 07:12:17.136116
+2023-03-18 07:12:17,139 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status
+2023-03-18 07:12:17,140 INFO    WriterThread:31434 [datastore.py:open_for_write():85] open: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/run-lj95lzs3.wandb
+2023-03-18 07:12:17,144 DEBUG   SenderThread:31434 [sender.py:send():336] send: header
+2023-03-18 07:12:17,169 DEBUG   SenderThread:31434 [sender.py:send():336] send: run
+2023-03-18 07:12:17,953 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: check_version
+2023-03-18 07:12:17,965 INFO    SenderThread:31434 [dir_watcher.py:__init__():219] watching files in: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files
+2023-03-18 07:12:17,965 INFO    SenderThread:31434 [sender.py:_start_run_threads():1081] run started: lj95lzs3 with start time 1679103737.135995
+2023-03-18 07:12:17,965 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:12:17,966 INFO    SenderThread:31434 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:12:17,966 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: check_version
+2023-03-18 07:12:18,105 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: run_start
+2023-03-18 07:12:18,619 DEBUG   HandlerThread:31434 [system_info.py:__init__():31] System info init
+2023-03-18 07:12:18,619 DEBUG   HandlerThread:31434 [system_info.py:__init__():46] System info init done
+2023-03-18 07:12:18,619 INFO    HandlerThread:31434 [system_monitor.py:start():183] Starting system monitor
+2023-03-18 07:12:18,619 INFO    SystemMonitor:31434 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2023-03-18 07:12:18,620 INFO    HandlerThread:31434 [system_monitor.py:probe():204] Collecting system info
+2023-03-18 07:12:18,620 INFO    SystemMonitor:31434 [interfaces.py:start():187] Started cpu monitoring
+2023-03-18 07:12:18,621 INFO    SystemMonitor:31434 [interfaces.py:start():187] Started disk monitoring
+2023-03-18 07:12:18,623 INFO    SystemMonitor:31434 [interfaces.py:start():187] Started gpu monitoring
+2023-03-18 07:12:18,624 INFO    SystemMonitor:31434 [interfaces.py:start():187] Started memory monitoring
+2023-03-18 07:12:18,625 INFO    SystemMonitor:31434 [interfaces.py:start():187] Started network monitoring
+2023-03-18 07:12:18,968 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-summary.json
+2023-03-18 07:12:19,447 DEBUG   HandlerThread:31434 [system_info.py:probe():195] Probing system
+2023-03-18 07:12:19,448 DEBUG   HandlerThread:31434 [system_info.py:_probe_git():180] Probing git
+2023-03-18 07:12:19,468 DEBUG   HandlerThread:31434 [system_info.py:_probe_git():188] Probing git done
+2023-03-18 07:12:19,468 DEBUG   HandlerThread:31434 [system_info.py:probe():240] Probing system done
+2023-03-18 07:12:19,468 DEBUG   HandlerThread:31434 [system_monitor.py:probe():213] {'os': 'Linux-4.15.0-202-generic-x86_64-with-debian-buster-sid', 'python': '3.7.10', 'heartbeatAt': '2023-03-18T01:42:19.447613', 'startedAt': '2023-03-18T01:42:17.123350', 'docker': None, 'cuda': None, 'args': ('configs/moe.json',), 'state': 'running', 'program': 'train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/m-bain/CondensedMovies.git', 'commit': 'c4f0c35a34b8b2cf2f3f54fa37000d0fb275685b'}, 'email': None, 'root': '/ssd_scratch/cvit/debashish/CondensedMovies', 'host': 'gnode030', 'username': 'debashish.roy', 'executable': '/home2/debashish.roy/miniconda3/envs/IS/bin/python', 'cpu_count': 20, 'cpu_count_logical': 40, 'cpu_freq': {'current': 1221.5053249999996, 'min': 1200.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 1202.661, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.624, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.512, 'min': 1200.0, 'max': 3400.0}, {'current': 1235.415, 'min': 1200.0, 'max': 3400.0}, {'current': 1203.758, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.938, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.221, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.599, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.632, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.784, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.343, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.62, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.609, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.638, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.797, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.87, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.513, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.528, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.398, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.822, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.196, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.706, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.7, 'min': 1200.0, 'max': 3400.0}, {'current': 1400.028, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.358, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.174, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.995, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.422, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.034, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.155, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.997, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.681, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.678, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.183, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.312, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.808, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.915, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.634, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.85, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.11, 'min': 1200.0, 'max': 3400.0}], 'disk': {'total': 136.48257064819336, 'used': 70.4279556274414}, 'gpu': 'NVIDIA GeForce GTX 1080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.78692626953125}}
+2023-03-18 07:12:19,468 INFO    HandlerThread:31434 [system_monitor.py:probe():214] Finished collecting system info
+2023-03-18 07:12:19,468 INFO    HandlerThread:31434 [system_monitor.py:probe():217] Publishing system info
+2023-03-18 07:12:19,468 DEBUG   HandlerThread:31434 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-03-18 07:12:19,469 DEBUG   HandlerThread:31434 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-18 07:12:19,469 DEBUG   HandlerThread:31434 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-03-18 07:12:19,976 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/requirements.txt
+2023-03-18 07:12:19,977 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/conda-environment.yaml
+2023-03-18 07:12:27,743 DEBUG   HandlerThread:31434 [system_info.py:_save_conda():86] Saving conda packages done
+2023-03-18 07:12:27,745 INFO    HandlerThread:31434 [system_monitor.py:probe():219] Finished publishing system info
+2023-03-18 07:12:27,753 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:27,753 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-18 07:12:27,754 DEBUG   SenderThread:31434 [sender.py:send():336] send: files
+2023-03-18 07:12:27,754 INFO    SenderThread:31434 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2023-03-18 07:12:27,763 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:12:27,764 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:12:27,978 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/conda-environment.yaml
+2023-03-18 07:12:27,979 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-metadata.json
+2023-03-18 07:12:28,119 DEBUG   SenderThread:31434 [sender.py:send():336] send: telemetry
+2023-03-18 07:12:28,119 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:28,756 INFO    wandb-upload_0:31434 [upload_job.py:push():138] Uploaded file /tmp/tmpje6wdxwwwandb/ixn7leyk-wandb-metadata.json
+2023-03-18 07:12:28,979 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_created():278] file/dir created: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:30,980 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:33,304 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:38,984 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:39,043 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:42,767 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:12:42,768 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:12:44,585 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:44,988 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:48,989 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:49,990 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:50,042 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:50,990 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/config.yaml
+2023-03-18 07:12:50,991 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:52,991 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:54,992 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:56,063 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:12:56,993 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:12:57,764 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:12:57,764 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:12:58,994 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:00,994 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:01,125 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:02,995 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:04,996 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:06,221 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:06,997 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:08,998 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:10,999 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:11,479 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:12,764 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:13:12,765 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:13:13,000 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:15,001 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:16,739 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:17,002 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:18,625 DEBUG   SystemMonitor:31434 [system_monitor.py:_start():161] Starting system metrics aggregation loop
+2023-03-18 07:13:18,628 DEBUG   SenderThread:31434 [sender.py:send():336] send: stats
+2023-03-18 07:13:19,002 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:21,003 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:22,071 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:23,004 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:25,005 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:27,006 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:27,347 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:28,029 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-18 07:13:28,030 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: stop_status
+2023-03-18 07:13:29,007 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:32,379 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:34,324 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: partial_history
+2023-03-18 07:13:34,329 DEBUG   SenderThread:31434 [sender.py:send():336] send: history
+2023-03-18 07:13:34,329 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: summary_record
+2023-03-18 07:13:34,330 INFO    SenderThread:31434 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:13:35,010 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:35,010 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-summary.json
+2023-03-18 07:13:37,011 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:37,446 DEBUG   SenderThread:31434 [sender.py:send():336] send: exit
+2023-03-18 07:13:37,447 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:37,482 INFO    SenderThread:31434 [sender.py:send_exit():559] handling exit code: 1
+2023-03-18 07:13:37,483 INFO    SenderThread:31434 [sender.py:send_exit():561] handling runtime: 79
+2023-03-18 07:13:37,483 INFO    SenderThread:31434 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:13:37,483 INFO    SenderThread:31434 [sender.py:send_exit():567] send defer
+2023-03-18 07:13:37,484 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,484 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-18 07:13:37,484 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,484 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-18 07:13:37,484 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 1
+2023-03-18 07:13:37,485 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,485 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-18 07:13:37,485 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,485 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-18 07:13:37,485 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 2
+2023-03-18 07:13:37,485 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,486 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-18 07:13:37,486 INFO    HandlerThread:31434 [system_monitor.py:finish():193] Stopping system monitor
+2023-03-18 07:13:37,487 DEBUG   SystemMonitor:31434 [system_monitor.py:_start():168] Finished system metrics aggregation loop
+2023-03-18 07:13:37,487 DEBUG   SystemMonitor:31434 [system_monitor.py:_start():172] Publishing last batch of metrics
+2023-03-18 07:13:37,489 INFO    HandlerThread:31434 [interfaces.py:finish():199] Joined cpu monitor
+2023-03-18 07:13:37,489 INFO    HandlerThread:31434 [interfaces.py:finish():199] Joined disk monitor
+2023-03-18 07:13:37,563 INFO    HandlerThread:31434 [interfaces.py:finish():199] Joined gpu monitor
+2023-03-18 07:13:37,564 INFO    HandlerThread:31434 [interfaces.py:finish():199] Joined memory monitor
+2023-03-18 07:13:37,564 INFO    HandlerThread:31434 [interfaces.py:finish():199] Joined network monitor
+2023-03-18 07:13:37,565 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,565 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-18 07:13:37,565 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 3
+2023-03-18 07:13:37,565 DEBUG   SenderThread:31434 [sender.py:send():336] send: stats
+2023-03-18 07:13:37,566 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,567 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-18 07:13:37,567 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,567 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-18 07:13:37,567 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 4
+2023-03-18 07:13:37,568 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,568 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-18 07:13:37,568 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,569 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-18 07:13:37,569 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 5
+2023-03-18 07:13:37,569 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,569 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-18 07:13:37,570 DEBUG   SenderThread:31434 [sender.py:send():336] send: summary
+2023-03-18 07:13:37,571 INFO    SenderThread:31434 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2023-03-18 07:13:37,571 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,571 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-18 07:13:37,571 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 6
+2023-03-18 07:13:37,572 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,572 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-18 07:13:37,572 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,572 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-18 07:13:37,573 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 7
+2023-03-18 07:13:37,573 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:37,573 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:37,574 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-18 07:13:37,574 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:37,574 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-18 07:13:38,012 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-summary.json
+2023-03-18 07:13:38,402 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 07:13:39,012 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:39,209 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 8
+2023-03-18 07:13:39,210 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 07:13:39,210 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:39,210 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-18 07:13:39,211 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:39,211 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-18 07:13:39,269 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 9
+2023-03-18 07:13:39,269 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:39,270 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-18 07:13:39,270 DEBUG   SenderThread:31434 [sender.py:send():336] send: artifact
+2023-03-18 07:13:39,402 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 07:13:40,012 INFO    Thread-13 :31434 [dir_watcher.py:_on_file_modified():295] file/dir modified: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:41,413 INFO    SenderThread:31434 [sender.py:send_artifact():1428] sent artifact job-https___github.com_m-bain_CondensedMovies.git_train.py - {'id': 'QXJ0aWZhY3Q6NDAwMTk5MTY0', 'digest': '953df6e943073273a9425c134331d259', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_m-bain_CondensedMovies.git_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_m-bain_CondensedMovies.git_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU3NjcxODM4', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NDAwMjA4NjM1', 'versionIndex': 1}}, 'version': 'v0'}
+2023-03-18 07:13:41,413 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:41,414 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-18 07:13:41,414 INFO    SenderThread:31434 [dir_watcher.py:finish():365] shutting down directory watcher
+2023-03-18 07:13:42,014 INFO    SenderThread:31434 [dir_watcher.py:finish():395] scan: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files
+2023-03-18 07:13:42,014 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log output.log
+2023-03-18 07:13:42,014 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-metadata.json wandb-metadata.json
+2023-03-18 07:13:42,015 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-summary.json wandb-summary.json
+2023-03-18 07:13:42,015 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/requirements.txt requirements.txt
+2023-03-18 07:13:42,026 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/config.yaml config.yaml
+2023-03-18 07:13:42,026 INFO    SenderThread:31434 [dir_watcher.py:finish():409] scan save: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/conda-environment.yaml conda-environment.yaml
+2023-03-18 07:13:42,027 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 10
+2023-03-18 07:13:42,027 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 07:13:42,028 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:42,028 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-18 07:13:42,042 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:42,042 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-18 07:13:42,042 INFO    SenderThread:31434 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 07:13:42,943 INFO    wandb-upload_1:31434 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/output.log
+2023-03-18 07:13:43,053 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: status_report
+2023-03-18 07:13:43,059 INFO    wandb-upload_0:31434 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/requirements.txt
+2023-03-18 07:13:43,125 INFO    wandb-upload_2:31434 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/wandb-summary.json
+2023-03-18 07:13:43,139 INFO    wandb-upload_4:31434 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/config.yaml
+2023-03-18 07:13:43,191 INFO    wandb-upload_5:31434 [upload_job.py:push():138] Uploaded file /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/files/conda-environment.yaml
+2023-03-18 07:13:43,392 INFO    Thread-12 :31434 [sender.py:transition_state():587] send defer: 11
+2023-03-18 07:13:43,392 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:43,392 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-18 07:13:43,393 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:43,393 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-18 07:13:43,393 INFO    SenderThread:31434 [file_pusher.py:join():169] waiting for file pusher
+2023-03-18 07:13:43,393 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 12
+2023-03-18 07:13:43,394 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:43,394 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-18 07:13:43,394 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:43,394 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-18 07:13:44,351 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 13
+2023-03-18 07:13:44,351 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:44,352 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-18 07:13:44,352 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:44,352 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-18 07:13:44,353 INFO    SenderThread:31434 [sender.py:transition_state():587] send defer: 14
+2023-03-18 07:13:44,354 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: defer
+2023-03-18 07:13:44,354 INFO    HandlerThread:31434 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-18 07:13:44,354 DEBUG   SenderThread:31434 [sender.py:send():336] send: final
+2023-03-18 07:13:44,355 DEBUG   SenderThread:31434 [sender.py:send():336] send: footer
+2023-03-18 07:13:44,355 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: defer
+2023-03-18 07:13:44,355 INFO    SenderThread:31434 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-18 07:13:44,356 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-18 07:13:44,357 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: poll_exit
+2023-03-18 07:13:44,358 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: server_info
+2023-03-18 07:13:44,358 DEBUG   SenderThread:31434 [sender.py:send_request():363] send_request: server_info
+2023-03-18 07:13:44,365 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-18 07:13:44,366 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-18 07:13:44,705 INFO    MainThread:31434 [wandb_run.py:_footer_history_summary_info():3422] rendering history
+2023-03-18 07:13:44,706 INFO    MainThread:31434 [wandb_run.py:_footer_history_summary_info():3454] rendering summary
+2023-03-18 07:13:44,707 INFO    MainThread:31434 [wandb_run.py:_footer_sync_info():3380] logging synced files
+2023-03-18 07:13:44,707 DEBUG   HandlerThread:31434 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-18 07:13:44,708 INFO    HandlerThread:31434 [handler.py:finish():842] shutting down handler
+2023-03-18 07:13:45,358 INFO    WriterThread:31434 [datastore.py:close():298] close: /ssd_scratch/cvit/debashish/CondensedMovies/wandb/run-20230318_071217-lj95lzs3/run-lj95lzs3.wandb
+2023-03-18 07:13:45,705 INFO    SenderThread:31434 [sender.py:finish():1504] shutting down sender
+2023-03-18 07:13:45,705 INFO    SenderThread:31434 [file_pusher.py:finish():164] shutting down file pusher
+2023-03-18 07:13:45,705 INFO    SenderThread:31434 [file_pusher.py:join():169] waiting for file pusher

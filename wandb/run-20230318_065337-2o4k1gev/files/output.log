@@ -1,0 +1,8 @@
+
+<parse_config.ConfigParser object at 0x14b4779ffd10>
+Traceback (most recent call last):
+  File "train.py", line 79, in <module>
+    for a in config:
+  File "/ssd_scratch/cvit/debashish/CondensedMovies/parse_config.py", line 88, in __getitem__
+    return self.config[name]
+KeyError: 0
