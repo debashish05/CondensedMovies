@@ -6,6 +6,7 @@ from utils import inf_loop
 from model.model import sim_matrix
 import ipdb
 from torch import autograd
+import wandb
 
 class Trainer(BaseTrainer):
     """
