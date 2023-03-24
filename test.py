@@ -16,11 +16,18 @@ import json
 import pandas as pd
 import wandb
 import os
+from pathlib import Path
 
 def main(config):
     path=config.resume
-    for i in range(20):
-        config.resume=path+"checkpoint-epoch"+str(i)+".pth"
+    path = str(path).rsplit("/",1)[0]
+    print(path)
+
+    for i in range(1,20):
+        config.resume=path+"/checkpoint-epoch"+str(i)+".pth"
+        print("The current model is:  ", config.resume)
+        config.resume = Path (config.resume)
+
         res_exp = str(config.resume).replace('model_best.pth', 'test_res.json')
 
         logger = config.get_logger('test')
@@ -49,7 +56,7 @@ def main(config):
         metrics = [getattr(module_metric, met) for met in config['metrics']]
 
         if config.resume is not None:
-            if os.path.exists(config.resume):
+            if not os.path.exists(config.resume):
                 break
             logger.info('Loading checkpoint: {} ...'.format(config.resume))
             checkpoint = torch.load(config.resume)
@@ -100,7 +107,12 @@ def main(config):
             verbose(epoch=0, metrics=res, name='MovieClips', mode=metric_name)  # TODO: refactor dataset name
             all_res['inter'][metric_name] = res
             
-        wandb.log(all_res["inter"])
+        #wandb.log(all_res["inter"])
+        wandb.log({'test/t2v_metrics.R1': all_res["inter"]['t2v_metrics.R1'],
+                    'test/t2v_metrics.R5': all_res["inter"]['t2v_metrics.R5'],
+                    'test/t2v_metrics.R10': all_res["inter"]['t2v_metrics.R10'],
+                    'test/t2v_metrics.MedR': all_res["inter"]['t2v_metrics.MedR'],
+                    'test/t2v_metrics.MeanR': all_res["inter"]['t2v_metrics.MedR']}) 
         # TODO: Print intra/inter metrics depending on training regime
         #print('\n#### INTRA-MOVIE ####')
         #all_res['intra'] = intra_movie_metrics(sims, imdbids, metrics)
@@ -124,7 +136,7 @@ def main(config):
             results.to_csv(results_fp)
 
 
-        return all_res
+    return all_res
 
 
 def verbose(epoch, metrics, mode, name="TEST"):
