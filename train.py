@@ -72,7 +72,6 @@ if __name__ == '__main__':
     #    CustomArgs(['--lr', '--learning_rate'], type=float, target=('optimizer', 'args', 'lr')),
     #    CustomArgs(['--bs', '--batch_size'], type=int, target=('data_loader', 'args', 'batch_size'))
     #]
-
     config = ConfigParser(args)
     wandb.init(project="condensed movies",config=config,name="scene+discription")
     main(config)
