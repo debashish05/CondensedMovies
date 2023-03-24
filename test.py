@@ -107,12 +107,7 @@ def main(config):
             verbose(epoch=0, metrics=res, name='MovieClips', mode=metric_name)  # TODO: refactor dataset name
             all_res['inter'][metric_name] = res
             
-        #wandb.log(all_res["inter"])
-        wandb.log({'test/t2v_metrics.R1': all_res["inter"]['t2v_metrics.R1'],
-                    'test/t2v_metrics.R5': all_res["inter"]['t2v_metrics.R5'],
-                    'test/t2v_metrics.R10': all_res["inter"]['t2v_metrics.R10'],
-                    'test/t2v_metrics.MedR': all_res["inter"]['t2v_metrics.MedR'],
-                    'test/t2v_metrics.MeanR': all_res["inter"]['t2v_metrics.MedR']}) 
+        wandb.log(all_res["inter"]) 
         # TODO: Print intra/inter metrics depending on training regime
         #print('\n#### INTRA-MOVIE ####')
         #all_res['intra'] = intra_movie_metrics(sims, imdbids, metrics)
