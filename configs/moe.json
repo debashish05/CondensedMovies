@@ -21,6 +21,9 @@
                 "face": {
                     "type": "mean"
                 },
+                "scene": {
+                    "type": "mean"
+                },
                 "speech": {
                     "type": "mean",
                     "cluster_size": 0,
@@ -41,14 +44,14 @@
 
             "experts_used": {
                 "characters": false,
-                "clip_name": false,
+                "clip_name": true,
                 "description": true,
-                "face": false,
-                "rgb": false,
+                "face": true,
+                "rgb": true,
                 "scene": true,
-                "speech": false,
-                "video": false,
-                "s3d": false
+                "speech": true,
+                "video": true,
+                "s3d": true
             },
             "experts": {
               "characters": "",

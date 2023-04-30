@@ -54,7 +54,7 @@ class NetVLAD(nn.Module):
         """
         self.sanity_checks(x)
         max_sample = x.size()[1]
-        x = x.view(-1, self.feature_size)  # B x N x D -> BN x D
+        x = x.reshape(-1, self.feature_size)  # B x N x D -> BN x D
 
         if x.device != self.clusters.device:
             msg = f"x.device {x.device} != cluster.device {self.clusters.device}"

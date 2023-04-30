@@ -11,7 +11,7 @@ from torch import autograd
 class MoEE(BaseModel):
     def __init__(self, label, experts_used, expert_dims, aggregation_method, projection_dim, pretrained, use_moe):
         super().__init__()
-        self.n_clips = 1
+        self.n_clips = 3
         self.label = label
         self.experts_used = experts_used.copy()
         self.experts_used.remove(self.label)
@@ -42,7 +42,7 @@ class MoEE(BaseModel):
         self.text_GU = nn.ModuleDict({
             expert: Gated_Embedding_Unit(self.aggregation['label'].out_dim, self.projection_dim, channels=0)
             for expert in experts_used
-
+            # scene and label as well
         })
 
         self.text_clip = nn.ModuleList([
@@ -77,23 +77,42 @@ class MoEE(BaseModel):
             miss = x[expert]['missing']
             if expert == 'label':
                 ftr = ftr.squeeze(1)
-                ftr = self.aggregation[expert](ftr, x[expert]['n_tokens'])
+                #because there is only one query
+                #torch.Size([64, 3, 20, 1024])
+                
+                #for i in range(self.n_clips):
+                
+                #c1 = self.aggregation[expert](ftr[:,0,:,:], x[expert]['n_tokens'])
+                #c2 = self.aggregation[expert](ftr[:,1,:,:], x[expert]['n_tokens'])
+                #c3 = self.aggregation[expert](ftr[:,2,:,:], x[expert]['n_tokens'])
+                #ftr=torch.stack((c1, c2, c3), 1)
+                ftr=self.aggregation[expert](ftr[:,1,:,:], x[expert]['n_tokens'])
+                # torch.Size([1280, 10240])
                 # ftr = ftr.mean(dim=1)
                 text = ftr
             else:
                 if len(ftr.shape) == 4:
+                    #only for expert that have number of token
                     n_tokens = x[expert]['n_tokens']
                     ftr = self.aggregation[expert](ftr, n_tokens)
                 res[expert] = ftr
+                #torch.Size([64, 3, 2208])
                 missing.append(miss)
                 video_experts.append(expert)
 
         missing = torch.stack(missing, dim=1).bool()  # b, expert, clip
         text_embed = []
         video_embed = []
-        for idx, expert in enumerate(video_experts):
+        for idx, expert in enumerate(video_experts):    #scenes
             video_embed.append(self.video_GU[expert](res[expert]))
+            #torch.Size([64, 3, 512])
+            # c1 = self.text_GU[expert](text[:,0,:])
+            # c2 = self.text_GU[expert](text[:,1,:])
+            # c3 = self.text_GU[expert](text[:,2,:])
+            # c4=torch.stack((c1, c2, c3), 1)
+            # text_embed.append(c4)
             text_embed.append(self.text_GU[expert](text))
+            #torch.Size([1280, 512])
 
         video_embed = torch.stack(video_embed, dim=2)  # b, n_clips, experts, ftr_dim
         text_embed = torch.stack(text_embed, dim=1)  # b, expert, ftr_dim

@@ -116,20 +116,98 @@ class MovieClips(Dataset):
         return len(self.data['clips'])
 
     def __getitem__(self, item):
-        videoid = self.data['clips'].iloc[item].name
 
+        ################
+
+        # videoid = self.data['clips'].iloc[item].name
+
+        # data = {}
+        # for expert in self.experts_used:
+        #     packet = self._get_expert_ftr(expert, videoid)
+        #     if expert == self.label:
+        #         data['label'] = packet
+        #     else:
+        #         data[expert] = packet
+
+        # id = {'imdbid': self.data['clips'].loc[videoid]['imdbid'], 'videoid': videoid}
+        # return data, id
+
+
+        ##################
+
+
+        videoid = self.data['clips'].iloc[item].name
+        movieid = self.data['clips'].iloc[item].imdbid
+        clip_idx = self.data['clips'].iloc[item].clip_idx
+
+        # find video id which have same movieid
+        # we need clip_idx (-1 adnd +1)
+        past=-1
+        ex=self.data['clips']
+        dx=ex.loc[(ex['imdbid']==movieid) & (ex['clip_idx']==clip_idx-1)]
+        dx=list(dx.index.values)
+        if len(dx)==1:
+            past=dx[0]
+
+        future=-1
+        dx=ex.loc[(ex['imdbid']==movieid) & (ex['clip_idx']==clip_idx+1)]
+        dx=list(dx.index.values)
+        if len(dx)==1:
+            future=dx[0]
+
+        # now i have video id of past and future clip
+
+        #e([64, 3, 1, 20, 1024])
         data = {}
         for expert in self.experts_used:
-            packet = self._get_expert_ftr(expert, videoid)
+            #packet = self._get_expert_ftr(expert, videoid)
+            packet0={'n_tokens': [], 'ftr': [], 'missing':[]}
+            packet=[]
+            packet.append(self._get_expert_ftr(expert, past))
+            packet.append(self._get_expert_ftr(expert, videoid))
+
+            #self.data['clips'].iloc[item].name
+            #packet = self._get_expert_ftr(expert, videoid)
+
+            packet.append(self._get_expert_ftr(expert, future))
+            
+            for pck in packet:
+                #if expert == self.label:
+
+                if 'n_tokens' in pck:
+                    packet0['n_tokens'].append(pck['n_tokens'][0])
+                else:
+                    packet0['n_tokens'].append(1)
+                    
+                packet0['ftr'].append(pck['ftr'][0].tolist())
+                packet0['missing'].append(pck['missing'][0])
+            
+            # stack
+            # these are creating extra dimension
+            packet0['n_tokens']=torch.Tensor(packet0['n_tokens'])
+            packet0['ftr']=torch.Tensor(packet0['ftr'])
+            packet0['missing']=torch.Tensor(packet0['missing'])
+            packet=packet0
+            
             if expert == self.label:
                 data['label'] = packet
             else:
                 data[expert] = packet
 
+        # if past==-1:
+        #     past=videoid
+        # if future==-1:
+        #     future=videoid
+
+        # id = {'imdbid': [self.data['clips'].loc[past]['imdbid'],
+        #                 self.data['clips'].loc[videoid]['imdbid'],
+        #                 self.data['clips'].loc[future]['imdbid'],                        
+        #                 ]
+        #       , 'videoid': [past,videoid,future]}
         id = {'imdbid': self.data['clips'].loc[videoid]['imdbid'], 'videoid': videoid}
         return data, id
 
-    def _get_expert_ftr(self, expert, videoid, context=False):
+    def _get_expert_ftr(self, expert, videoid, context=True):
         packet = {}
 
         if expert == 'plot':
@@ -142,9 +220,9 @@ class MovieClips(Dataset):
         else:
             missing = False
             ftr = self.expert_data[expert][videoid]
-            #if context:
-            #    ftr = np.zeros(ftr.shape)
-                #ftr = np.random.randn(*ftr.shape)
+            # if context:
+            #     ftr = np.zeros(ftr.shape)
+            #     ftr = np.random.randn(*ftr.shape)
 
 
         ftr = torch.from_numpy(ftr)
