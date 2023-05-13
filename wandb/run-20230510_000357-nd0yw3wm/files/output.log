@@ -1,0 +1,219 @@
+loading features >>> [Total: 1.3s] (gnode086:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 3.0% of system memory 3.0 GB/131.0 GB
+loading features >>> [Total: 35.8s] (gnode086:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+loading features >>> [Total: 1.2s] (gnode086:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 6.2% of system memory 7.3 GB/126.7 GB
+loading features >>> [Total: 1.3s] (gnode086:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 6.3% of system memory 7.5 GB/126.5 GB
+loading features >>> [Total: 16.6s] (gnode086:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 7.7% of system memory 9.4 GB/124.6 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 7.8% of system memory 9.5 GB/124.5 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 7.8% of system memory 9.5 GB/124.5 GB
+train size: 24098 clips
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (scene): MeanToken()
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=21, bias=True)
+)
+Trainable parameters: 50541651
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.121227
+Train Epoch: 1 [160/24098 (1%)] Loss: 0.121297
+Train Epoch: 1 [320/24098 (1%)] Loss: 0.121458
+Train Epoch: 1 [480/24098 (2%)] Loss: 0.121212
+Train Epoch: 1 [640/24098 (3%)] Loss: 0.121311
+Train Epoch: 1 [800/24098 (3%)] Loss: 0.121151
+Train Epoch: 1 [960/24098 (4%)] Loss: 0.120772
+Train Epoch: 1 [1120/24098 (5%)] Loss: 0.121107
+Traceback (most recent call last):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 322, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 136, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/home2/debashish.roy/CondensedMovies/train.py", line 86, in <module>
+    main(config)
+  File "/home2/debashish.roy/CondensedMovies/train.py", line 57, in main
+    trainer.train()
+  File "/home2/debashish.roy/CondensedMovies/base/base_trainer.py", line 68, in train
+    result = self._train_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 66, in _train_epoch
+    for batch_idx, (minibatch, id) in enumerate(self.data_loader):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home2/debashish.roy/CondensedMovies/data_loader/MovieClips_dataset.py", line 145, in __getitem__
+    dx=ex.loc[(ex['imdbid']==movieid) & (ex['clip_idx']==clip_idx-1)]
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/ops/common.py", line 69, in new_method
+    return method(self, other)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/arraylike.py", line 32, in __eq__
+    return self._cmp_method(other, operator.eq)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/series.py", line 5504, in _cmp_method
+    return self._construct_result(res_values, name=res_name)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/series.py", line 2945, in _construct_result
+    out = self._constructor(result, index=self.index)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/series.py", line 448, in __init__
+    self.name = name
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/generic.py", line 5509, in __setattr__
+    object.__setattr__(self, name, value)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/series.py", line 629, in name
+    validate_all_hashable(value, error_name=f"{type(self).__name__}.name")
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/dtypes/common.py", line 1737, in validate_all_hashable
+    if not all(is_hashable(arg) for arg in args):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/pandas/core/dtypes/common.py", line 1737, in <genexpr>
+    if not all(is_hashable(arg) for arg in args):
+KeyboardInterrupt

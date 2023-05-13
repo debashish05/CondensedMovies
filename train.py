@@ -73,5 +73,5 @@ if __name__ == '__main__':
     #    CustomArgs(['--bs', '--batch_size'], type=int, target=('data_loader', 'args', 'batch_size'))
     #]
     config = ConfigParser(args)
-    wandb.init(project="condensed movies",config=config,name="scene+discription")
+    wandb.init(project="condensed movies",config=config,name="FRSSVS+lr=0.00003")
     main(config)

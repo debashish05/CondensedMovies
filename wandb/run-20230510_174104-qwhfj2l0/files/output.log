@@ -1,0 +1,1068 @@
+loading features >>> [Total: 1.2s] (gnode086:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 5.3% of system memory 6.0 GB/127.9 GB
+loading features >>> [Total: 35.3s] (gnode086:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 8.4% of system memory 10.2 GB/123.7 GB
+loading features >>> [Total: 0.7s] (gnode086:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 8.4% of system memory 10.3 GB/123.7 GB
+loading features >>> [Total: 0.7s] (gnode086:data/features/S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 8.5% of system memory 10.3 GB/123.6 GB
+train size: 24098 clips
+>>> Currently using 8.5% of system memory 10.3 GB/123.6 GB
+>>> Currently using 8.5% of system memory 10.3 GB/123.6 GB
+>>> Currently using 8.5% of system memory 10.3 GB/123.6 GB
+>>> Currently using 8.5% of system memory 10.3 GB/123.6 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=9, bias=True)
+)
+Trainable parameters: 24503343
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.121564
+Train Epoch: 1 [512/24098 (2%)] Loss: 0.121618
+Train Epoch: 1 [1024/24098 (4%)] Loss: 0.121424
+Train Epoch: 1 [1536/24098 (6%)] Loss: 0.121264
+Train Epoch: 1 [2048/24098 (8%)] Loss: 0.121491
+Train Epoch: 1 [2560/24098 (11%)] Loss: 0.121368
+Train Epoch: 1 [3072/24098 (13%)] Loss: 0.121647
+Train Epoch: 1 [3584/24098 (15%)] Loss: 0.121318
+Train Epoch: 1 [4096/24098 (17%)] Loss: 0.121469
+Train Epoch: 1 [4608/24098 (19%)] Loss: 0.121484
+Train Epoch: 1 [5120/24098 (21%)] Loss: 0.121514
+Train Epoch: 1 [5632/24098 (23%)] Loss: 0.121763
+Train Epoch: 1 [6144/24098 (25%)] Loss: 0.121826
+Train Epoch: 1 [6656/24098 (28%)] Loss: 0.121317
+Train Epoch: 1 [7168/24098 (30%)] Loss: 0.121777
+Train Epoch: 1 [7680/24098 (32%)] Loss: 0.121758
+Train Epoch: 1 [8192/24098 (34%)] Loss: 0.121513
+Train Epoch: 1 [8704/24098 (36%)] Loss: 0.121425
+Train Epoch: 1 [9216/24098 (38%)] Loss: 0.121217
+Train Epoch: 1 [9728/24098 (40%)] Loss: 0.121340
+Train Epoch: 1 [10240/24098 (42%)] Loss: 0.121442
+Train Epoch: 1 [10752/24098 (45%)] Loss: 0.121339
+Train Epoch: 1 [11264/24098 (47%)] Loss: 0.121497
+Train Epoch: 1 [11776/24098 (49%)] Loss: 0.121895
+Train Epoch: 1 [12288/24098 (51%)] Loss: 0.121307
+Train Epoch: 1 [12800/24098 (53%)] Loss: 0.121457
+Train Epoch: 1 [13312/24098 (55%)] Loss: 0.121564
+Train Epoch: 1 [13824/24098 (57%)] Loss: 0.121208
+Train Epoch: 1 [14336/24098 (59%)] Loss: 0.121588
+Train Epoch: 1 [14848/24098 (62%)] Loss: 0.121473
+Train Epoch: 1 [15360/24098 (64%)] Loss: 0.121402
+Train Epoch: 1 [15872/24098 (66%)] Loss: 0.121323
+Train Epoch: 1 [16384/24098 (68%)] Loss: 0.121207
+Train Epoch: 1 [16896/24098 (70%)] Loss: 0.121466
+Train Epoch: 1 [17408/24098 (72%)] Loss: 0.121609
+Train Epoch: 1 [17920/24098 (74%)] Loss: 0.121410
+Train Epoch: 1 [18432/24098 (76%)] Loss: 0.121608
+Train Epoch: 1 [18944/24098 (79%)] Loss: 0.121521
+Train Epoch: 1 [19456/24098 (81%)] Loss: 0.121276
+Train Epoch: 1 [19968/24098 (83%)] Loss: 0.121325
+Train Epoch: 1 [20480/24098 (85%)] Loss: 0.121298
+Train Epoch: 1 [20992/24098 (87%)] Loss: 0.121304
+Train Epoch: 1 [21504/24098 (89%)] Loss: 0.121758
+Train Epoch: 1 [22016/24098 (91%)] Loss: 0.121662
+Train Epoch: 1 [22528/24098 (93%)] Loss: 0.121171
+Train Epoch: 1 [23040/24098 (96%)] Loss: 0.121484
+Train Epoch: 1 [23552/24098 (98%)] Loss: 0.121440
+Train Epoch: 1 [24064/24098 (100%)] Loss: 0.121441
+[t2v_metrics]MovieClips epoch 1, R@1: 0.1, R@5: 0.1, R@10 0.4, R@50 1.5MedR: 1719, MeanR: 1709.5
+[v2t_metrics]MovieClips epoch 1, R@1: 0.0, R@5: 0.1, R@10 0.2, R@50 1.2MedR: 1723, MeanR: 1711.4
+    epoch          : 1
+    loss           : 0.1214887683010544
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.12150363624095917
+    val_t2v_metrics_R1: 0.05952380952380952
+    val_t2v_metrics_R5: 0.1488095238095238
+    val_t2v_metrics_R10: 0.35714285714285715
+    val_t2v_metrics_R50: 1.5178571428571428
+    val_t2v_metrics_MedR: 1719.0
+    val_t2v_metrics_MeanR: 1709.4952380952382
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 0.14679833775776607
+    val_v2t_metrics_R1: 0.02976190476190476
+    val_v2t_metrics_R5: 0.11904761904761904
+    val_v2t_metrics_R10: 0.17857142857142858
+    val_v2t_metrics_R50: 1.25
+    val_v2t_metrics_MedR: 1723.0
+    val_v2t_metrics_MeanR: 1711.3949404761904
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 0.08584818870877431
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch1.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 2 [0/24098 (0%)] Loss: 0.121596
+Train Epoch: 2 [512/24098 (2%)] Loss: 0.080969
+Train Epoch: 2 [1024/24098 (4%)] Loss: 0.069122
+Train Epoch: 2 [1536/24098 (6%)] Loss: 0.045412
+Train Epoch: 2 [2048/24098 (8%)] Loss: 0.043132
+Train Epoch: 2 [2560/24098 (11%)] Loss: 0.040713
+Train Epoch: 2 [3072/24098 (13%)] Loss: 0.041888
+Train Epoch: 2 [3584/24098 (15%)] Loss: 0.028328
+Train Epoch: 2 [4096/24098 (17%)] Loss: 0.028286
+Train Epoch: 2 [4608/24098 (19%)] Loss: 0.033180
+Train Epoch: 2 [5120/24098 (21%)] Loss: 0.033254
+Train Epoch: 2 [5632/24098 (23%)] Loss: 0.034169
+Train Epoch: 2 [6144/24098 (25%)] Loss: 0.028707
+Train Epoch: 2 [6656/24098 (28%)] Loss: 0.030462
+Train Epoch: 2 [7168/24098 (30%)] Loss: 0.021403
+Train Epoch: 2 [7680/24098 (32%)] Loss: 0.028491
+Train Epoch: 2 [8192/24098 (34%)] Loss: 0.021236
+Train Epoch: 2 [8704/24098 (36%)] Loss: 0.023214
+Train Epoch: 2 [9216/24098 (38%)] Loss: 0.024438
+Train Epoch: 2 [9728/24098 (40%)] Loss: 0.024618
+Train Epoch: 2 [10240/24098 (42%)] Loss: 0.018075
+Train Epoch: 2 [10752/24098 (45%)] Loss: 0.027105
+Train Epoch: 2 [11264/24098 (47%)] Loss: 0.030611
+Train Epoch: 2 [11776/24098 (49%)] Loss: 0.021073
+Train Epoch: 2 [12288/24098 (51%)] Loss: 0.022485
+Train Epoch: 2 [12800/24098 (53%)] Loss: 0.017533
+Train Epoch: 2 [13312/24098 (55%)] Loss: 0.029893
+Train Epoch: 2 [13824/24098 (57%)] Loss: 0.024308
+Train Epoch: 2 [14336/24098 (59%)] Loss: 0.024824
+Train Epoch: 2 [14848/24098 (62%)] Loss: 0.021204
+Train Epoch: 2 [15360/24098 (64%)] Loss: 0.028901
+Train Epoch: 2 [15872/24098 (66%)] Loss: 0.021730
+Train Epoch: 2 [16384/24098 (68%)] Loss: 0.019611
+Train Epoch: 2 [16896/24098 (70%)] Loss: 0.015597
+Train Epoch: 2 [17408/24098 (72%)] Loss: 0.021682
+Train Epoch: 2 [17920/24098 (74%)] Loss: 0.022328
+Train Epoch: 2 [18432/24098 (76%)] Loss: 0.024613
+Train Epoch: 2 [18944/24098 (79%)] Loss: 0.013986
+Train Epoch: 2 [19456/24098 (81%)] Loss: 0.018958
+Train Epoch: 2 [19968/24098 (83%)] Loss: 0.022163
+Train Epoch: 2 [20480/24098 (85%)] Loss: 0.020370
+Train Epoch: 2 [20992/24098 (87%)] Loss: 0.025908
+Train Epoch: 2 [21504/24098 (89%)] Loss: 0.019010
+Train Epoch: 2 [22016/24098 (91%)] Loss: 0.018135
+Train Epoch: 2 [22528/24098 (93%)] Loss: 0.017808
+Train Epoch: 2 [23040/24098 (96%)] Loss: 0.017127
+Train Epoch: 2 [23552/24098 (98%)] Loss: 0.025841
+Train Epoch: 2 [24064/24098 (100%)] Loss: 0.024221
+[t2v_metrics]MovieClips epoch 2, R@1: 3.2, R@5: 11.2, R@10 17.0, R@50 38.5MedR: 92, MeanR: 258.4
+[v2t_metrics]MovieClips epoch 2, R@1: 4.5, R@5: 13.1, R@10 19.3, R@50 42.6MedR: 75, MeanR: 226.8
+    epoch          : 2
+    loss           : 0.029244639513030926
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.023141205310821533
+    val_t2v_metrics_R1: 3.2142857142857144
+    val_t2v_metrics_R5: 11.160714285714286
+    val_t2v_metrics_R10: 16.964285714285715
+    val_t2v_metrics_R50: 38.45238095238095
+    val_t2v_metrics_MedR: 92.0
+    val_t2v_metrics_MeanR: 258.3800595238095
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 8.47430353395476
+    val_v2t_metrics_R1: 4.494047619047619
+    val_v2t_metrics_R5: 13.095238095238095
+    val_v2t_metrics_R10: 19.285714285714285
+    val_v2t_metrics_R50: 42.589285714285715
+    val_v2t_metrics_MedR: 75.0
+    val_v2t_metrics_MeanR: 226.81785714285715
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 10.431071744979498
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch2.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 3 [0/24098 (0%)] Loss: 0.011746
+Train Epoch: 3 [512/24098 (2%)] Loss: 0.012539
+Train Epoch: 3 [1024/24098 (4%)] Loss: 0.009502
+Train Epoch: 3 [1536/24098 (6%)] Loss: 0.008622
+Train Epoch: 3 [2048/24098 (8%)] Loss: 0.010590
+Train Epoch: 3 [2560/24098 (11%)] Loss: 0.007431
+Train Epoch: 3 [3072/24098 (13%)] Loss: 0.013292
+Train Epoch: 3 [3584/24098 (15%)] Loss: 0.008059
+Train Epoch: 3 [4096/24098 (17%)] Loss: 0.011188
+Train Epoch: 3 [4608/24098 (19%)] Loss: 0.007336
+Train Epoch: 3 [5120/24098 (21%)] Loss: 0.007156
+Train Epoch: 3 [5632/24098 (23%)] Loss: 0.008551
+Train Epoch: 3 [6144/24098 (25%)] Loss: 0.007192
+Train Epoch: 3 [6656/24098 (28%)] Loss: 0.009403
+Train Epoch: 3 [7168/24098 (30%)] Loss: 0.008903
+Train Epoch: 3 [7680/24098 (32%)] Loss: 0.011413
+Train Epoch: 3 [8192/24098 (34%)] Loss: 0.007608
+Train Epoch: 3 [8704/24098 (36%)] Loss: 0.007547
+Train Epoch: 3 [9216/24098 (38%)] Loss: 0.009211
+Train Epoch: 3 [9728/24098 (40%)] Loss: 0.008425
+Train Epoch: 3 [10240/24098 (42%)] Loss: 0.008875
+Train Epoch: 3 [10752/24098 (45%)] Loss: 0.011004
+Train Epoch: 3 [11264/24098 (47%)] Loss: 0.009634
+Train Epoch: 3 [11776/24098 (49%)] Loss: 0.007101
+Train Epoch: 3 [12288/24098 (51%)] Loss: 0.008229
+Train Epoch: 3 [12800/24098 (53%)] Loss: 0.007884
+Train Epoch: 3 [13312/24098 (55%)] Loss: 0.009407
+Train Epoch: 3 [13824/24098 (57%)] Loss: 0.006120
+Train Epoch: 3 [14336/24098 (59%)] Loss: 0.009779
+Train Epoch: 3 [14848/24098 (62%)] Loss: 0.009503
+Train Epoch: 3 [15360/24098 (64%)] Loss: 0.006153
+Train Epoch: 3 [15872/24098 (66%)] Loss: 0.008227
+Train Epoch: 3 [16384/24098 (68%)] Loss: 0.010517
+Train Epoch: 3 [16896/24098 (70%)] Loss: 0.010016
+Train Epoch: 3 [17408/24098 (72%)] Loss: 0.006212
+Train Epoch: 3 [17920/24098 (74%)] Loss: 0.011382
+Train Epoch: 3 [18432/24098 (76%)] Loss: 0.009124
+Train Epoch: 3 [18944/24098 (79%)] Loss: 0.008025
+Train Epoch: 3 [19456/24098 (81%)] Loss: 0.006884
+Train Epoch: 3 [19968/24098 (83%)] Loss: 0.009239
+Train Epoch: 3 [20480/24098 (85%)] Loss: 0.009584
+Train Epoch: 3 [20992/24098 (87%)] Loss: 0.007991
+Train Epoch: 3 [21504/24098 (89%)] Loss: 0.009219
+Train Epoch: 3 [22016/24098 (91%)] Loss: 0.008891
+Train Epoch: 3 [22528/24098 (93%)] Loss: 0.006477
+Train Epoch: 3 [23040/24098 (96%)] Loss: 0.008054
+Train Epoch: 3 [23552/24098 (98%)] Loss: 0.008033
+Train Epoch: 3 [24064/24098 (100%)] Loss: 0.005407
+[t2v_metrics]MovieClips epoch 3, R@1: 4.9, R@5: 14.4, R@10 21.4, R@50 44.1MedR: 69, MeanR: 223.5
+[v2t_metrics]MovieClips epoch 3, R@1: 6.4, R@5: 16.8, R@10 23.0, R@50 47.0MedR: 61, MeanR: 204.4
+    epoch          : 3
+    loss           : 0.00932233704041581
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.021186698228120804
+    val_t2v_metrics_R1: 4.880952380952381
+    val_t2v_metrics_R5: 14.43452380952381
+    val_t2v_metrics_R10: 21.428571428571427
+    val_t2v_metrics_R50: 44.13690476190476
+    val_t2v_metrics_MedR: 69.0
+    val_t2v_metrics_MeanR: 223.50193452380952
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 11.471848869986063
+    val_v2t_metrics_R1: 6.369047619047619
+    val_v2t_metrics_R5: 16.75595238095238
+    val_v2t_metrics_R10: 23.00595238095238
+    val_v2t_metrics_R50: 47.023809523809526
+    val_v2t_metrics_MedR: 61.0
+    val_v2t_metrics_MeanR: 204.3532738095238
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 13.490496801701683
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch3.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 4 [0/24098 (0%)] Loss: 0.003873
+Train Epoch: 4 [512/24098 (2%)] Loss: 0.003923
+Train Epoch: 4 [1024/24098 (4%)] Loss: 0.003977
+Train Epoch: 4 [1536/24098 (6%)] Loss: 0.002455
+Train Epoch: 4 [2048/24098 (8%)] Loss: 0.004473
+Train Epoch: 4 [2560/24098 (11%)] Loss: 0.003833
+Train Epoch: 4 [3072/24098 (13%)] Loss: 0.003433
+Train Epoch: 4 [3584/24098 (15%)] Loss: 0.004497
+Train Epoch: 4 [4096/24098 (17%)] Loss: 0.002676
+Train Epoch: 4 [4608/24098 (19%)] Loss: 0.002727
+Train Epoch: 4 [5120/24098 (21%)] Loss: 0.004004
+Train Epoch: 4 [5632/24098 (23%)] Loss: 0.003558
+Train Epoch: 4 [6144/24098 (25%)] Loss: 0.003780
+Train Epoch: 4 [6656/24098 (28%)] Loss: 0.003101
+Train Epoch: 4 [7168/24098 (30%)] Loss: 0.004165
+Train Epoch: 4 [7680/24098 (32%)] Loss: 0.004293
+Train Epoch: 4 [8192/24098 (34%)] Loss: 0.003071
+Train Epoch: 4 [8704/24098 (36%)] Loss: 0.002226
+Train Epoch: 4 [9216/24098 (38%)] Loss: 0.003046
+Train Epoch: 4 [9728/24098 (40%)] Loss: 0.003552
+Train Epoch: 4 [10240/24098 (42%)] Loss: 0.003203
+Train Epoch: 4 [10752/24098 (45%)] Loss: 0.002771
+Train Epoch: 4 [11264/24098 (47%)] Loss: 0.002846
+Train Epoch: 4 [11776/24098 (49%)] Loss: 0.002693
+Train Epoch: 4 [12288/24098 (51%)] Loss: 0.002943
+Train Epoch: 4 [12800/24098 (53%)] Loss: 0.003231
+Train Epoch: 4 [13312/24098 (55%)] Loss: 0.003331
+Train Epoch: 4 [13824/24098 (57%)] Loss: 0.003553
+Train Epoch: 4 [14336/24098 (59%)] Loss: 0.003549
+Train Epoch: 4 [14848/24098 (62%)] Loss: 0.002374
+Train Epoch: 4 [15360/24098 (64%)] Loss: 0.003661
+Train Epoch: 4 [15872/24098 (66%)] Loss: 0.004652
+Train Epoch: 4 [16384/24098 (68%)] Loss: 0.003384
+Train Epoch: 4 [16896/24098 (70%)] Loss: 0.002572
+Train Epoch: 4 [17408/24098 (72%)] Loss: 0.003187
+Train Epoch: 4 [17920/24098 (74%)] Loss: 0.002797
+Train Epoch: 4 [18432/24098 (76%)] Loss: 0.003182
+Train Epoch: 4 [18944/24098 (79%)] Loss: 0.003176
+Train Epoch: 4 [19456/24098 (81%)] Loss: 0.002627
+Train Epoch: 4 [19968/24098 (83%)] Loss: 0.003477
+Train Epoch: 4 [20480/24098 (85%)] Loss: 0.004226
+Train Epoch: 4 [20992/24098 (87%)] Loss: 0.002644
+Train Epoch: 4 [21504/24098 (89%)] Loss: 0.003743
+Train Epoch: 4 [22016/24098 (91%)] Loss: 0.004001
+Train Epoch: 4 [22528/24098 (93%)] Loss: 0.003130
+Train Epoch: 4 [23040/24098 (96%)] Loss: 0.002799
+Train Epoch: 4 [23552/24098 (98%)] Loss: 0.002608
+Train Epoch: 4 [24064/24098 (100%)] Loss: 0.003674
+[t2v_metrics]MovieClips epoch 4, R@1: 6.0, R@5: 16.7, R@10 23.4, R@50 47.3MedR: 60, MeanR: 219.2
+[v2t_metrics]MovieClips epoch 4, R@1: 7.4, R@5: 19.0, R@10 26.1, R@50 49.4MedR: 52.5, MeanR: 198.5
+    epoch          : 4
+    loss           : 0.0032894766465847228
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.021376676857471466
+    val_t2v_metrics_R1: 5.982142857142857
+    val_t2v_metrics_R5: 16.696428571428573
+    val_t2v_metrics_R10: 23.363095238095237
+    val_t2v_metrics_R50: 47.32142857142857
+    val_t2v_metrics_MedR: 60.0
+    val_t2v_metrics_MeanR: 219.1654761904762
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 13.263869727281707
+    val_v2t_metrics_R1: 7.380952380952381
+    val_v2t_metrics_R5: 19.047619047619047
+    val_v2t_metrics_R10: 26.071428571428573
+    val_v2t_metrics_R50: 49.375
+    val_v2t_metrics_MedR: 52.5
+    val_v2t_metrics_MeanR: 198.46934523809523
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 15.418400042860593
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch4.pth ...
+Train Epoch: 5 [0/24098 (0%)] Loss: 0.001900
+Train Epoch: 5 [512/24098 (2%)] Loss: 0.001375
+Train Epoch: 5 [1024/24098 (4%)] Loss: 0.001430
+Train Epoch: 5 [1536/24098 (6%)] Loss: 0.001343
+Train Epoch: 5 [2048/24098 (8%)] Loss: 0.000969
+Train Epoch: 5 [2560/24098 (11%)] Loss: 0.001073
+Train Epoch: 5 [3072/24098 (13%)] Loss: 0.001135
+Train Epoch: 5 [3584/24098 (15%)] Loss: 0.001439
+Train Epoch: 5 [4096/24098 (17%)] Loss: 0.001062
+Train Epoch: 5 [4608/24098 (19%)] Loss: 0.000911
+Train Epoch: 5 [5120/24098 (21%)] Loss: 0.001089
+Train Epoch: 5 [5632/24098 (23%)] Loss: 0.001249
+Train Epoch: 5 [6144/24098 (25%)] Loss: 0.001266
+Train Epoch: 5 [6656/24098 (28%)] Loss: 0.001005
+Train Epoch: 5 [7168/24098 (30%)] Loss: 0.001432
+Train Epoch: 5 [7680/24098 (32%)] Loss: 0.001208
+Train Epoch: 5 [8192/24098 (34%)] Loss: 0.001044
+Train Epoch: 5 [8704/24098 (36%)] Loss: 0.000886
+Train Epoch: 5 [9216/24098 (38%)] Loss: 0.001149
+Train Epoch: 5 [9728/24098 (40%)] Loss: 0.001592
+Train Epoch: 5 [10240/24098 (42%)] Loss: 0.001016
+Train Epoch: 5 [10752/24098 (45%)] Loss: 0.001017
+Train Epoch: 5 [11264/24098 (47%)] Loss: 0.001378
+Train Epoch: 5 [11776/24098 (49%)] Loss: 0.001188
+Train Epoch: 5 [12288/24098 (51%)] Loss: 0.000868
+Train Epoch: 5 [12800/24098 (53%)] Loss: 0.001300
+Train Epoch: 5 [13312/24098 (55%)] Loss: 0.001309
+Train Epoch: 5 [13824/24098 (57%)] Loss: 0.001647
+Train Epoch: 5 [14336/24098 (59%)] Loss: 0.001375
+Train Epoch: 5 [14848/24098 (62%)] Loss: 0.001379
+Train Epoch: 5 [15360/24098 (64%)] Loss: 0.000832
+Train Epoch: 5 [15872/24098 (66%)] Loss: 0.001190
+Train Epoch: 5 [16384/24098 (68%)] Loss: 0.001272
+Train Epoch: 5 [16896/24098 (70%)] Loss: 0.001415
+Train Epoch: 5 [17408/24098 (72%)] Loss: 0.001129
+Train Epoch: 5 [17920/24098 (74%)] Loss: 0.001289
+Train Epoch: 5 [18432/24098 (76%)] Loss: 0.001328
+Train Epoch: 5 [18944/24098 (79%)] Loss: 0.001549
+Train Epoch: 5 [19456/24098 (81%)] Loss: 0.001052
+Train Epoch: 5 [19968/24098 (83%)] Loss: 0.001306
+Train Epoch: 5 [20480/24098 (85%)] Loss: 0.001052
+Train Epoch: 5 [20992/24098 (87%)] Loss: 0.001167
+Train Epoch: 5 [21504/24098 (89%)] Loss: 0.001022
+Train Epoch: 5 [22016/24098 (91%)] Loss: 0.000880
+Train Epoch: 5 [22528/24098 (93%)] Loss: 0.001009
+Train Epoch: 5 [23040/24098 (96%)] Loss: 0.001540
+Train Epoch: 5 [23552/24098 (98%)] Loss: 0.001425
+Train Epoch: 5 [24064/24098 (100%)] Loss: 0.001139
+[t2v_metrics]MovieClips epoch 5, R@1: 6.8, R@5: 18.7, R@10 25.5, R@50 49.2MedR: 53, MeanR: 213.6
+[v2t_metrics]MovieClips epoch 5, R@1: 8.2, R@5: 20.2, R@10 27.5, R@50 50.6MedR: 49, MeanR: 198.5
+    epoch          : 5
+    loss           : 0.0012462178071644603
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.021869901567697525
+    val_t2v_metrics_R1: 6.755952380952381
+    val_t2v_metrics_R5: 18.660714285714285
+    val_t2v_metrics_R10: 25.535714285714285
+    val_t2v_metrics_R50: 49.226190476190474
+    val_t2v_metrics_MedR: 53.0
+    val_t2v_metrics_MeanR: 213.61190476190475
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 14.765708299487592
+    val_v2t_metrics_R1: 8.18452380952381
+    val_v2t_metrics_R5: 20.238095238095237
+    val_v2t_metrics_R10: 27.5
+    val_v2t_metrics_R50: 50.56547619047619
+    val_v2t_metrics_MedR: 49.0
+    val_v2t_metrics_MeanR: 198.49821428571428
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.576719239069945
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch5.pth ...
+Train Epoch: 6 [0/24098 (0%)] Loss: 0.000819
+Train Epoch: 6 [512/24098 (2%)] Loss: 0.000603
+Train Epoch: 6 [1024/24098 (4%)] Loss: 0.000393
+Train Epoch: 6 [1536/24098 (6%)] Loss: 0.000596
+Train Epoch: 6 [2048/24098 (8%)] Loss: 0.000474
+Train Epoch: 6 [2560/24098 (11%)] Loss: 0.000821
+Train Epoch: 6 [3072/24098 (13%)] Loss: 0.000669
+Train Epoch: 6 [3584/24098 (15%)] Loss: 0.000615
+Train Epoch: 6 [4096/24098 (17%)] Loss: 0.000484
+Train Epoch: 6 [4608/24098 (19%)] Loss: 0.000949
+Train Epoch: 6 [5120/24098 (21%)] Loss: 0.000316
+Train Epoch: 6 [5632/24098 (23%)] Loss: 0.000686
+Train Epoch: 6 [6144/24098 (25%)] Loss: 0.000523
+Train Epoch: 6 [6656/24098 (28%)] Loss: 0.000739
+Train Epoch: 6 [7168/24098 (30%)] Loss: 0.000667
+Train Epoch: 6 [7680/24098 (32%)] Loss: 0.000424
+Train Epoch: 6 [8192/24098 (34%)] Loss: 0.000806
+Train Epoch: 6 [8704/24098 (36%)] Loss: 0.000689
+Train Epoch: 6 [9216/24098 (38%)] Loss: 0.000811
+Train Epoch: 6 [9728/24098 (40%)] Loss: 0.000466
+Train Epoch: 6 [10240/24098 (42%)] Loss: 0.000660
+Train Epoch: 6 [10752/24098 (45%)] Loss: 0.000479
+Train Epoch: 6 [11264/24098 (47%)] Loss: 0.000450
+Train Epoch: 6 [11776/24098 (49%)] Loss: 0.000497
+Train Epoch: 6 [12288/24098 (51%)] Loss: 0.000646
+Train Epoch: 6 [12800/24098 (53%)] Loss: 0.000536
+Train Epoch: 6 [13312/24098 (55%)] Loss: 0.000712
+Train Epoch: 6 [13824/24098 (57%)] Loss: 0.000846
+Train Epoch: 6 [14336/24098 (59%)] Loss: 0.000344
+Train Epoch: 6 [14848/24098 (62%)] Loss: 0.000540
+Train Epoch: 6 [15360/24098 (64%)] Loss: 0.000521
+Train Epoch: 6 [15872/24098 (66%)] Loss: 0.000473
+Train Epoch: 6 [16384/24098 (68%)] Loss: 0.000565
+Train Epoch: 6 [16896/24098 (70%)] Loss: 0.000504
+Train Epoch: 6 [17408/24098 (72%)] Loss: 0.000799
+Train Epoch: 6 [17920/24098 (74%)] Loss: 0.000670
+Train Epoch: 6 [18432/24098 (76%)] Loss: 0.000636
+Train Epoch: 6 [18944/24098 (79%)] Loss: 0.000649
+Train Epoch: 6 [19456/24098 (81%)] Loss: 0.000720
+Train Epoch: 6 [19968/24098 (83%)] Loss: 0.000626
+Train Epoch: 6 [20480/24098 (85%)] Loss: 0.000495
+Train Epoch: 6 [20992/24098 (87%)] Loss: 0.000576
+Train Epoch: 6 [21504/24098 (89%)] Loss: 0.000571
+Train Epoch: 6 [22016/24098 (91%)] Loss: 0.000619
+Train Epoch: 6 [22528/24098 (93%)] Loss: 0.000555
+Train Epoch: 6 [23040/24098 (96%)] Loss: 0.000708
+Train Epoch: 6 [23552/24098 (98%)] Loss: 0.000646
+Train Epoch: 6 [24064/24098 (100%)] Loss: 0.000573
+[t2v_metrics]MovieClips epoch 6, R@1: 7.6, R@5: 18.6, R@10 26.5, R@50 49.6MedR: 52, MeanR: 216.1
+[v2t_metrics]MovieClips epoch 6, R@1: 8.2, R@5: 20.5, R@10 28.1, R@50 50.2MedR: 50, MeanR: 203.4
+    epoch          : 6
+    loss           : 0.0006128690275456262
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.022755475714802742
+    val_t2v_metrics_R1: 7.589285714285714
+    val_t2v_metrics_R5: 18.63095238095238
+    val_t2v_metrics_R10: 26.517857142857142
+    val_t2v_metrics_R50: 49.583333333333336
+    val_t2v_metrics_MedR: 52.0
+    val_t2v_metrics_MeanR: 216.1
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.535484255696044
+    val_v2t_metrics_R1: 8.214285714285714
+    val_v2t_metrics_R5: 20.50595238095238
+    val_v2t_metrics_R10: 28.125
+    val_v2t_metrics_R50: 50.208333333333336
+    val_v2t_metrics_MedR: 50.0
+    val_v2t_metrics_MeanR: 203.3514880952381
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.795029078464427
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch6.pth ...
+Train Epoch: 7 [0/24098 (0%)] Loss: 0.000293
+Train Epoch: 7 [512/24098 (2%)] Loss: 0.000446
+Train Epoch: 7 [1024/24098 (4%)] Loss: 0.000385
+Train Epoch: 7 [1536/24098 (6%)] Loss: 0.000504
+Train Epoch: 7 [2048/24098 (8%)] Loss: 0.000401
+Train Epoch: 7 [2560/24098 (11%)] Loss: 0.000360
+Train Epoch: 7 [3072/24098 (13%)] Loss: 0.000314
+Train Epoch: 7 [3584/24098 (15%)] Loss: 0.000279
+Train Epoch: 7 [4096/24098 (17%)] Loss: 0.000331
+Train Epoch: 7 [4608/24098 (19%)] Loss: 0.000362
+Train Epoch: 7 [5120/24098 (21%)] Loss: 0.000406
+Train Epoch: 7 [5632/24098 (23%)] Loss: 0.000241
+Train Epoch: 7 [6144/24098 (25%)] Loss: 0.000397
+Train Epoch: 7 [6656/24098 (28%)] Loss: 0.000323
+Train Epoch: 7 [7168/24098 (30%)] Loss: 0.000241
+Train Epoch: 7 [7680/24098 (32%)] Loss: 0.000242
+Train Epoch: 7 [8192/24098 (34%)] Loss: 0.000426
+Train Epoch: 7 [8704/24098 (36%)] Loss: 0.000563
+Train Epoch: 7 [9216/24098 (38%)] Loss: 0.000270
+Train Epoch: 7 [9728/24098 (40%)] Loss: 0.000410
+Train Epoch: 7 [10240/24098 (42%)] Loss: 0.000355
+Train Epoch: 7 [10752/24098 (45%)] Loss: 0.000294
+Train Epoch: 7 [11264/24098 (47%)] Loss: 0.000498
+Train Epoch: 7 [11776/24098 (49%)] Loss: 0.000347
+Train Epoch: 7 [12288/24098 (51%)] Loss: 0.000309
+Train Epoch: 7 [12800/24098 (53%)] Loss: 0.000482
+Train Epoch: 7 [13312/24098 (55%)] Loss: 0.000647
+Train Epoch: 7 [13824/24098 (57%)] Loss: 0.000453
+Train Epoch: 7 [14336/24098 (59%)] Loss: 0.000240
+Train Epoch: 7 [14848/24098 (62%)] Loss: 0.000332
+Train Epoch: 7 [15360/24098 (64%)] Loss: 0.000345
+Train Epoch: 7 [15872/24098 (66%)] Loss: 0.000341
+Train Epoch: 7 [16384/24098 (68%)] Loss: 0.000299
+Train Epoch: 7 [16896/24098 (70%)] Loss: 0.000306
+Train Epoch: 7 [17408/24098 (72%)] Loss: 0.000627
+Train Epoch: 7 [17920/24098 (74%)] Loss: 0.000310
+Train Epoch: 7 [18432/24098 (76%)] Loss: 0.000458
+Train Epoch: 7 [18944/24098 (79%)] Loss: 0.000404
+Train Epoch: 7 [19456/24098 (81%)] Loss: 0.000348
+Train Epoch: 7 [19968/24098 (83%)] Loss: 0.000600
+Train Epoch: 7 [20480/24098 (85%)] Loss: 0.000274
+Train Epoch: 7 [20992/24098 (87%)] Loss: 0.000352
+Train Epoch: 7 [21504/24098 (89%)] Loss: 0.000488
+Train Epoch: 7 [22016/24098 (91%)] Loss: 0.000563
+Train Epoch: 7 [22528/24098 (93%)] Loss: 0.000365
+Train Epoch: 7 [23040/24098 (96%)] Loss: 0.000388
+Train Epoch: 7 [23552/24098 (98%)] Loss: 0.000317
+Train Epoch: 7 [24064/24098 (100%)] Loss: 0.000466
+[t2v_metrics]MovieClips epoch 7, R@1: 7.1, R@5: 18.8, R@10 26.8, R@50 49.7MedR: 51, MeanR: 222.9
+[v2t_metrics]MovieClips epoch 7, R@1: 8.2, R@5: 20.7, R@10 28.2, R@50 49.8MedR: 51, MeanR: 214.1
+    epoch          : 7
+    loss           : 0.0003814929045983207
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.024028629064559937
+    val_t2v_metrics_R1: 7.113095238095238
+    val_t2v_metrics_R5: 18.779761904761905
+    val_t2v_metrics_R10: 26.845238095238095
+    val_t2v_metrics_R50: 49.70238095238095
+    val_t2v_metrics_MedR: 51.0
+    val_t2v_metrics_MeanR: 222.87157738095237
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.306362289474402
+    val_v2t_metrics_R1: 8.154761904761905
+    val_v2t_metrics_R5: 20.654761904761905
+    val_v2t_metrics_R10: 28.214285714285715
+    val_v2t_metrics_R50: 49.791666666666664
+    val_v2t_metrics_MedR: 51.0
+    val_v2t_metrics_MeanR: 214.08690476190475
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.812547053524817
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch7.pth ...
+Train Epoch: 8 [0/24098 (0%)] Loss: 0.000258
+Train Epoch: 8 [512/24098 (2%)] Loss: 0.000196
+Train Epoch: 8 [1024/24098 (4%)] Loss: 0.000267
+Train Epoch: 8 [1536/24098 (6%)] Loss: 0.000235
+Train Epoch: 8 [2048/24098 (8%)] Loss: 0.000230
+Train Epoch: 8 [2560/24098 (11%)] Loss: 0.000176
+Train Epoch: 8 [3072/24098 (13%)] Loss: 0.000170
+Train Epoch: 8 [3584/24098 (15%)] Loss: 0.000208
+Train Epoch: 8 [4096/24098 (17%)] Loss: 0.000240
+Train Epoch: 8 [4608/24098 (19%)] Loss: 0.000188
+Train Epoch: 8 [5120/24098 (21%)] Loss: 0.000307
+Train Epoch: 8 [5632/24098 (23%)] Loss: 0.000293
+Train Epoch: 8 [6144/24098 (25%)] Loss: 0.000342
+Train Epoch: 8 [6656/24098 (28%)] Loss: 0.000240
+Train Epoch: 8 [7168/24098 (30%)] Loss: 0.000269
+Train Epoch: 8 [7680/24098 (32%)] Loss: 0.000390
+Train Epoch: 8 [8192/24098 (34%)] Loss: 0.000310
+Train Epoch: 8 [8704/24098 (36%)] Loss: 0.000276
+Train Epoch: 8 [9216/24098 (38%)] Loss: 0.000362
+Train Epoch: 8 [9728/24098 (40%)] Loss: 0.000284
+Train Epoch: 8 [10240/24098 (42%)] Loss: 0.000204
+Train Epoch: 8 [10752/24098 (45%)] Loss: 0.000248
+Train Epoch: 8 [11264/24098 (47%)] Loss: 0.000416
+Train Epoch: 8 [11776/24098 (49%)] Loss: 0.000254
+Train Epoch: 8 [12288/24098 (51%)] Loss: 0.000113
+Train Epoch: 8 [12800/24098 (53%)] Loss: 0.000286
+Train Epoch: 8 [13312/24098 (55%)] Loss: 0.000205
+Train Epoch: 8 [13824/24098 (57%)] Loss: 0.000367
+Train Epoch: 8 [14336/24098 (59%)] Loss: 0.000150
+Train Epoch: 8 [14848/24098 (62%)] Loss: 0.000233
+Train Epoch: 8 [15360/24098 (64%)] Loss: 0.000296
+Train Epoch: 8 [15872/24098 (66%)] Loss: 0.000191
+Train Epoch: 8 [16384/24098 (68%)] Loss: 0.000274
+Train Epoch: 8 [16896/24098 (70%)] Loss: 0.000179
+Train Epoch: 8 [17408/24098 (72%)] Loss: 0.000198
+Train Epoch: 8 [17920/24098 (74%)] Loss: 0.000278
+Train Epoch: 8 [18432/24098 (76%)] Loss: 0.000282
+Train Epoch: 8 [18944/24098 (79%)] Loss: 0.000312
+Train Epoch: 8 [19456/24098 (81%)] Loss: 0.000348
+Train Epoch: 8 [19968/24098 (83%)] Loss: 0.000232
+Train Epoch: 8 [20480/24098 (85%)] Loss: 0.000223
+Train Epoch: 8 [20992/24098 (87%)] Loss: 0.000197
+Train Epoch: 8 [21504/24098 (89%)] Loss: 0.000253
+Train Epoch: 8 [22016/24098 (91%)] Loss: 0.000283
+Train Epoch: 8 [22528/24098 (93%)] Loss: 0.000192
+Train Epoch: 8 [23040/24098 (96%)] Loss: 0.000281
+Train Epoch: 8 [23552/24098 (98%)] Loss: 0.000181
+Train Epoch: 8 [24064/24098 (100%)] Loss: 0.000058
+[t2v_metrics]MovieClips epoch 8, R@1: 7.5, R@5: 19.6, R@10 26.6, R@50 50.3MedR: 49, MeanR: 231.2
+[v2t_metrics]MovieClips epoch 8, R@1: 8.8, R@5: 20.5, R@10 28.7, R@50 49.7MedR: 52, MeanR: 220.0
+    epoch          : 8
+    loss           : 0.00026967788079400876
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.02498800680041313
+    val_t2v_metrics_R1: 7.5
+    val_t2v_metrics_R5: 19.613095238095237
+    val_t2v_metrics_R10: 26.636904761904763
+    val_t2v_metrics_R50: 50.29761904761905
+    val_t2v_metrics_MedR: 49.0
+    val_t2v_metrics_MeanR: 231.21279761904762
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.765111723746582
+    val_v2t_metrics_R1: 8.779761904761905
+    val_v2t_metrics_R10: 28.69047619047619
+    val_v2t_metrics_R50: 49.67261904761905
+    val_v2t_metrics_MedR: 52.0
+    val_v2t_metrics_MeanR: 219.96369047619046
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 17.286224402922297
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch8.pth ...
+Train Epoch: 9 [0/24098 (0%)] Loss: 0.000233
+Train Epoch: 9 [512/24098 (2%)] Loss: 0.000234
+Train Epoch: 9 [1024/24098 (4%)] Loss: 0.000173
+Train Epoch: 9 [1536/24098 (6%)] Loss: 0.000211
+Train Epoch: 9 [2048/24098 (8%)] Loss: 0.000178
+Train Epoch: 9 [2560/24098 (11%)] Loss: 0.000315
+Train Epoch: 9 [3072/24098 (13%)] Loss: 0.000106
+Train Epoch: 9 [3584/24098 (15%)] Loss: 0.000190
+Train Epoch: 9 [4096/24098 (17%)] Loss: 0.000249
+Train Epoch: 9 [4608/24098 (19%)] Loss: 0.000187
+Train Epoch: 9 [5120/24098 (21%)] Loss: 0.000212
+Train Epoch: 9 [5632/24098 (23%)] Loss: 0.000289
+Train Epoch: 9 [6144/24098 (25%)] Loss: 0.000135
+Train Epoch: 9 [6656/24098 (28%)] Loss: 0.000162
+Train Epoch: 9 [7168/24098 (30%)] Loss: 0.000188
+Train Epoch: 9 [7680/24098 (32%)] Loss: 0.000093
+Train Epoch: 9 [8192/24098 (34%)] Loss: 0.000188
+Train Epoch: 9 [8704/24098 (36%)] Loss: 0.000078
+Train Epoch: 9 [9216/24098 (38%)] Loss: 0.000333
+Train Epoch: 9 [9728/24098 (40%)] Loss: 0.000111
+Train Epoch: 9 [10240/24098 (42%)] Loss: 0.000171
+Train Epoch: 9 [10752/24098 (45%)] Loss: 0.000210
+Train Epoch: 9 [11264/24098 (47%)] Loss: 0.000211
+Train Epoch: 9 [11776/24098 (49%)] Loss: 0.000388
+Train Epoch: 9 [12288/24098 (51%)] Loss: 0.000313
+Train Epoch: 9 [12800/24098 (53%)] Loss: 0.000233
+Train Epoch: 9 [13312/24098 (55%)] Loss: 0.000164
+Train Epoch: 9 [13824/24098 (57%)] Loss: 0.000228
+Train Epoch: 9 [14336/24098 (59%)] Loss: 0.000173
+Train Epoch: 9 [14848/24098 (62%)] Loss: 0.000202
+Train Epoch: 9 [15360/24098 (64%)] Loss: 0.000269
+Train Epoch: 9 [15872/24098 (66%)] Loss: 0.000157
+Train Epoch: 9 [16384/24098 (68%)] Loss: 0.000158
+Train Epoch: 9 [16896/24098 (70%)] Loss: 0.000252
+Train Epoch: 9 [17408/24098 (72%)] Loss: 0.000230
+Train Epoch: 9 [17920/24098 (74%)] Loss: 0.000233
+Train Epoch: 9 [18432/24098 (76%)] Loss: 0.000185
+Train Epoch: 9 [18944/24098 (79%)] Loss: 0.000143
+Train Epoch: 9 [19456/24098 (81%)] Loss: 0.000155
+Train Epoch: 9 [19968/24098 (83%)] Loss: 0.000246
+Train Epoch: 9 [20480/24098 (85%)] Loss: 0.000148
+Train Epoch: 9 [20992/24098 (87%)] Loss: 0.000173
+Train Epoch: 9 [21504/24098 (89%)] Loss: 0.000211
+Train Epoch: 9 [22016/24098 (91%)] Loss: 0.000447
+Train Epoch: 9 [22528/24098 (93%)] Loss: 0.000132
+Train Epoch: 9 [23040/24098 (96%)] Loss: 0.000077
+Train Epoch: 9 [23552/24098 (98%)] Loss: 0.000222
+Train Epoch: 9 [24064/24098 (100%)] Loss: 0.000202
+[t2v_metrics]MovieClips epoch 9, R@1: 7.4, R@5: 19.2, R@10 27.1, R@50 49.7MedR: 51.5, MeanR: 232.9
+[v2t_metrics]MovieClips epoch 9, R@1: 8.2, R@5: 20.5, R@10 28.5, R@50 50.3MedR: 50, MeanR: 224.3
+    epoch          : 9
+    loss           : 0.00019462838057111775
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.02569420635700226
+    val_t2v_metrics_R1: 7.351190476190476
+    val_t2v_metrics_R5: 19.166666666666668
+    val_t2v_metrics_R10: 27.053571428571427
+    val_t2v_metrics_R50: 49.67261904761905
+    val_t2v_metrics_MedR: 51.5
+    val_t2v_metrics_MeanR: 232.87886904761905
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.621028469067866
+    val_v2t_metrics_R1: 8.244047619047619
+    val_v2t_metrics_R5: 20.476190476190474
+    val_v2t_metrics_R10: 28.541666666666668
+    val_v2t_metrics_R50: 50.32738095238095
+    val_v2t_metrics_MedR: 50.0
+    val_v2t_metrics_MeanR: 224.31190476190477
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.889741166322523
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch9.pth ...
+Train Epoch: 10 [0/24098 (0%)] Loss: 0.000157
+Train Epoch: 10 [512/24098 (2%)] Loss: 0.000223
+Train Epoch: 10 [1024/24098 (4%)] Loss: 0.000192
+Train Epoch: 10 [1536/24098 (6%)] Loss: 0.000141
+Train Epoch: 10 [2048/24098 (8%)] Loss: 0.000165
+Train Epoch: 10 [2560/24098 (11%)] Loss: 0.000355
+Train Epoch: 10 [3072/24098 (13%)] Loss: 0.000159
+Train Epoch: 10 [3584/24098 (15%)] Loss: 0.000171
+Train Epoch: 10 [4096/24098 (17%)] Loss: 0.000195
+Train Epoch: 10 [4608/24098 (19%)] Loss: 0.000127
+Train Epoch: 10 [5120/24098 (21%)] Loss: 0.000103
+Train Epoch: 10 [5632/24098 (23%)] Loss: 0.000112
+Train Epoch: 10 [6144/24098 (25%)] Loss: 0.000177
+Train Epoch: 10 [6656/24098 (28%)] Loss: 0.000327
+Train Epoch: 10 [7168/24098 (30%)] Loss: 0.000220
+Train Epoch: 10 [7680/24098 (32%)] Loss: 0.000102
+Train Epoch: 10 [8192/24098 (34%)] Loss: 0.000166
+Train Epoch: 10 [8704/24098 (36%)] Loss: 0.000131
+Train Epoch: 10 [9216/24098 (38%)] Loss: 0.000173
+Train Epoch: 10 [9728/24098 (40%)] Loss: 0.000076
+Train Epoch: 10 [10240/24098 (42%)] Loss: 0.000209
+Train Epoch: 10 [10752/24098 (45%)] Loss: 0.000172
+Train Epoch: 10 [11264/24098 (47%)] Loss: 0.000271
+Train Epoch: 10 [11776/24098 (49%)] Loss: 0.000061
+Train Epoch: 10 [12288/24098 (51%)] Loss: 0.000212
+Train Epoch: 10 [12800/24098 (53%)] Loss: 0.000104
+Train Epoch: 10 [13312/24098 (55%)] Loss: 0.000232
+Train Epoch: 10 [13824/24098 (57%)] Loss: 0.000099
+Train Epoch: 10 [14336/24098 (59%)] Loss: 0.000220
+Train Epoch: 10 [14848/24098 (62%)] Loss: 0.000130
+Train Epoch: 10 [15360/24098 (64%)] Loss: 0.000247
+Train Epoch: 10 [15872/24098 (66%)] Loss: 0.000129
+Train Epoch: 10 [16384/24098 (68%)] Loss: 0.000229
+Train Epoch: 10 [16896/24098 (70%)] Loss: 0.000181
+Train Epoch: 10 [17408/24098 (72%)] Loss: 0.000281
+Train Epoch: 10 [17920/24098 (74%)] Loss: 0.000144
+Train Epoch: 10 [18432/24098 (76%)] Loss: 0.000443
+Train Epoch: 10 [18944/24098 (79%)] Loss: 0.000189
+Train Epoch: 10 [19456/24098 (81%)] Loss: 0.000472
+Train Epoch: 10 [19968/24098 (83%)] Loss: 0.000119
+Train Epoch: 10 [20480/24098 (85%)] Loss: 0.000066
+Train Epoch: 10 [20992/24098 (87%)] Loss: 0.000110
+Train Epoch: 10 [21504/24098 (89%)] Loss: 0.000293
+Train Epoch: 10 [22016/24098 (91%)] Loss: 0.000104
+Train Epoch: 10 [22528/24098 (93%)] Loss: 0.000226
+Train Epoch: 10 [23040/24098 (96%)] Loss: 0.000161
+Train Epoch: 10 [23552/24098 (98%)] Loss: 0.000164
+Train Epoch: 10 [24064/24098 (100%)] Loss: 0.000030
+[t2v_metrics]MovieClips epoch 10, R@1: 7.6, R@5: 19.6, R@10 27.4, R@50 49.9MedR: 51, MeanR: 233.7
+[v2t_metrics]MovieClips epoch 10, R@1: 8.5, R@5: 20.5, R@10 28.5, R@50 50.0MedR: 50.5, MeanR: 225.9
+    epoch          : 10
+    loss           : 0.0001553220701839624
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.02607114613056183
+    val_t2v_metrics_R1: 7.559523809523809
+    val_t2v_metrics_R5: 19.583333333333332
+    val_t2v_metrics_R10: 27.351190476190474
+    val_t2v_metrics_R50: 49.910714285714285
+    val_t2v_metrics_MedR: 51.0
+    val_t2v_metrics_MeanR: 233.68244047619046
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.938682877523714
+    val_v2t_metrics_R1: 8.452380952380953
+    val_v2t_metrics_R5: 20.476190476190474
+    val_v2t_metrics_R10: 28.482142857142858
+    val_v2t_metrics_R50: 50.0
+    val_v2t_metrics_MedR: 50.5
+    val_v2t_metrics_MeanR: 225.86428571428573
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 17.018983920470056
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch10.pth ...
+Train Epoch: 11 [0/24098 (0%)] Loss: 0.000089
+Train Epoch: 11 [512/24098 (2%)] Loss: 0.000162
+Train Epoch: 11 [1024/24098 (4%)] Loss: 0.000092
+Train Epoch: 11 [1536/24098 (6%)] Loss: 0.000169
+Train Epoch: 11 [2048/24098 (8%)] Loss: 0.000086
+Train Epoch: 11 [2560/24098 (11%)] Loss: 0.000170
+Train Epoch: 11 [3072/24098 (13%)] Loss: 0.000317
+Train Epoch: 11 [3584/24098 (15%)] Loss: 0.000282
+Train Epoch: 11 [4096/24098 (17%)] Loss: 0.000105
+Train Epoch: 11 [4608/24098 (19%)] Loss: 0.000082
+Train Epoch: 11 [5120/24098 (21%)] Loss: 0.000107
+Train Epoch: 11 [5632/24098 (23%)] Loss: 0.000082
+Train Epoch: 11 [6144/24098 (25%)] Loss: 0.000088
+Train Epoch: 11 [6656/24098 (28%)] Loss: 0.000079
+Train Epoch: 11 [7168/24098 (30%)] Loss: 0.000196
+Train Epoch: 11 [7680/24098 (32%)] Loss: 0.000118
+Train Epoch: 11 [8192/24098 (34%)] Loss: 0.000056
+Train Epoch: 11 [8704/24098 (36%)] Loss: 0.000063
+Train Epoch: 11 [9216/24098 (38%)] Loss: 0.000240
+Train Epoch: 11 [9728/24098 (40%)] Loss: 0.000144
+Train Epoch: 11 [10240/24098 (42%)] Loss: 0.000109
+Train Epoch: 11 [10752/24098 (45%)] Loss: 0.000143
+Train Epoch: 11 [11264/24098 (47%)] Loss: 0.000074
+Train Epoch: 11 [11776/24098 (49%)] Loss: 0.000120
+Train Epoch: 11 [12288/24098 (51%)] Loss: 0.000091
+Train Epoch: 11 [12800/24098 (53%)] Loss: 0.000114
+Train Epoch: 11 [13312/24098 (55%)] Loss: 0.000298
+Train Epoch: 11 [13824/24098 (57%)] Loss: 0.000086
+Train Epoch: 11 [14336/24098 (59%)] Loss: 0.000142
+Train Epoch: 11 [14848/24098 (62%)] Loss: 0.000109
+Train Epoch: 11 [15360/24098 (64%)] Loss: 0.000072
+Train Epoch: 11 [15872/24098 (66%)] Loss: 0.000212
+Train Epoch: 11 [16384/24098 (68%)] Loss: 0.000090
+Train Epoch: 11 [16896/24098 (70%)] Loss: 0.000182
+Train Epoch: 11 [17408/24098 (72%)] Loss: 0.000159
+Train Epoch: 11 [17920/24098 (74%)] Loss: 0.000234
+Train Epoch: 11 [18432/24098 (76%)] Loss: 0.000068
+Train Epoch: 11 [18944/24098 (79%)] Loss: 0.000110
+Train Epoch: 11 [19456/24098 (81%)] Loss: 0.000093
+Train Epoch: 11 [19968/24098 (83%)] Loss: 0.000134
+Train Epoch: 11 [20480/24098 (85%)] Loss: 0.000072
+Train Epoch: 11 [20992/24098 (87%)] Loss: 0.000138
+Train Epoch: 11 [21504/24098 (89%)] Loss: 0.000170
+Train Epoch: 11 [22016/24098 (91%)] Loss: 0.000139
+Train Epoch: 11 [22528/24098 (93%)] Loss: 0.000061
+Train Epoch: 11 [23040/24098 (96%)] Loss: 0.000180
+Train Epoch: 11 [23552/24098 (98%)] Loss: 0.000128
+Train Epoch: 11 [24064/24098 (100%)] Loss: 0.000167
+[t2v_metrics]MovieClips epoch 11, R@1: 7.5, R@5: 19.6, R@10 27.2, R@50 49.3MedR: 53.5, MeanR: 244.6
+[v2t_metrics]MovieClips epoch 11, R@1: 8.1, R@5: 20.5, R@10 28.0, R@50 50.1MedR: 50, MeanR: 232.0
+    epoch          : 11
+    loss           : 0.0001294976238221386
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.02713186666369438
+    val_t2v_metrics_R1: 7.470238095238095
+    val_t2v_metrics_R5: 19.583333333333332
+    val_t2v_metrics_R10: 27.202380952380953
+    val_t2v_metrics_R50: 49.31547619047619
+    val_t2v_metrics_MedR: 53.5
+    val_t2v_metrics_MeanR: 244.5610119047619
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.846839508322217
+    val_v2t_metrics_R1: 8.06547619047619
+    val_v2t_metrics_R5: 20.476190476190474
+    val_v2t_metrics_R10: 28.00595238095238
+    val_v2t_metrics_R50: 50.089285714285715
+    val_v2t_metrics_MedR: 50.0
+    val_v2t_metrics_MeanR: 231.98675595238095
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.661336670285586
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch11.pth ...
+Train Epoch: 12 [0/24098 (0%)] Loss: 0.000164
+Train Epoch: 12 [512/24098 (2%)] Loss: 0.000043
+Train Epoch: 12 [1024/24098 (4%)] Loss: 0.000077
+Train Epoch: 12 [1536/24098 (6%)] Loss: 0.000113
+Train Epoch: 12 [2048/24098 (8%)] Loss: 0.000071
+Train Epoch: 12 [2560/24098 (11%)] Loss: 0.000096
+Train Epoch: 12 [3072/24098 (13%)] Loss: 0.000123
+Train Epoch: 12 [3584/24098 (15%)] Loss: 0.000156
+Train Epoch: 12 [4096/24098 (17%)] Loss: 0.000072
+Train Epoch: 12 [4608/24098 (19%)] Loss: 0.000092
+Train Epoch: 12 [5120/24098 (21%)] Loss: 0.000160
+Train Epoch: 12 [5632/24098 (23%)] Loss: 0.000090
+Train Epoch: 12 [6144/24098 (25%)] Loss: 0.000082
+Train Epoch: 12 [6656/24098 (28%)] Loss: 0.000131
+Train Epoch: 12 [7168/24098 (30%)] Loss: 0.000045
+Train Epoch: 12 [7680/24098 (32%)] Loss: 0.000058
+Train Epoch: 12 [8192/24098 (34%)] Loss: 0.000056
+Train Epoch: 12 [8704/24098 (36%)] Loss: 0.000063
+Train Epoch: 12 [9216/24098 (38%)] Loss: 0.000265
+Train Epoch: 12 [9728/24098 (40%)] Loss: 0.000311
+Train Epoch: 12 [10240/24098 (42%)] Loss: 0.000101
+Train Epoch: 12 [10752/24098 (45%)] Loss: 0.000337
+Train Epoch: 12 [11264/24098 (47%)] Loss: 0.000062
+Train Epoch: 12 [11776/24098 (49%)] Loss: 0.000076
+Train Epoch: 12 [12288/24098 (51%)] Loss: 0.000159
+Train Epoch: 12 [12800/24098 (53%)] Loss: 0.000094
+Train Epoch: 12 [13312/24098 (55%)] Loss: 0.000069
+Train Epoch: 12 [13824/24098 (57%)] Loss: 0.000069
+Train Epoch: 12 [14336/24098 (59%)] Loss: 0.000053
+Train Epoch: 12 [14848/24098 (62%)] Loss: 0.000121
+Train Epoch: 12 [15360/24098 (64%)] Loss: 0.000077
+Train Epoch: 12 [15872/24098 (66%)] Loss: 0.000059
+Train Epoch: 12 [16384/24098 (68%)] Loss: 0.000049
+Train Epoch: 12 [16896/24098 (70%)] Loss: 0.000185
+Train Epoch: 12 [17408/24098 (72%)] Loss: 0.000096
+Train Epoch: 12 [17920/24098 (74%)] Loss: 0.000099
+Train Epoch: 12 [18432/24098 (76%)] Loss: 0.000095
+Train Epoch: 12 [18944/24098 (79%)] Loss: 0.000140
+Train Epoch: 12 [19456/24098 (81%)] Loss: 0.000100
+Train Epoch: 12 [19968/24098 (83%)] Loss: 0.000073
+Train Epoch: 12 [20480/24098 (85%)] Loss: 0.000056
+Train Epoch: 12 [20992/24098 (87%)] Loss: 0.000033
+Train Epoch: 12 [21504/24098 (89%)] Loss: 0.000088
+Train Epoch: 12 [22016/24098 (91%)] Loss: 0.000136
+Train Epoch: 12 [22528/24098 (93%)] Loss: 0.000115
+Train Epoch: 12 [23040/24098 (96%)] Loss: 0.000063
+Train Epoch: 12 [23552/24098 (98%)] Loss: 0.000112
+Train Epoch: 12 [24064/24098 (100%)] Loss: 0.000114
+[t2v_metrics]MovieClips epoch 12, R@1: 7.4, R@5: 19.7, R@10 27.4, R@50 48.9MedR: 54, MeanR: 245.3
+[v2t_metrics]MovieClips epoch 12, R@1: 8.3, R@5: 20.3, R@10 28.8, R@50 49.3MedR: 52, MeanR: 240.3
+    epoch          : 12
+    loss           : 0.00010905510726295577
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.027625519782304764
+    val_t2v_metrics_R1: 7.410714285714286
+    val_t2v_metrics_R5: 19.732142857142858
+    val_t2v_metrics_R10: 27.38095238095238
+    val_t2v_metrics_R50: 48.898809523809526
+    val_t2v_metrics_MedR: 54.0
+    val_t2v_metrics_MeanR: 245.31458333333333
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.879163613582627
+    val_v2t_metrics_R1: 8.303571428571429
+    val_v2t_metrics_R5: 20.267857142857142
+    val_v2t_metrics_R10: 28.839285714285715
+    val_v2t_metrics_R50: 49.345238095238095
+    val_v2t_metrics_MedR: 52.0
+    val_v2t_metrics_MeanR: 240.33869047619046
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.93112255557671
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch12.pth ...
+Train Epoch: 13 [0/24098 (0%)] Loss: 0.000119
+Train Epoch: 13 [512/24098 (2%)] Loss: 0.000147
+Train Epoch: 13 [1024/24098 (4%)] Loss: 0.000072
+Train Epoch: 13 [1536/24098 (6%)] Loss: 0.000063
+Train Epoch: 13 [2048/24098 (8%)] Loss: 0.000075
+Train Epoch: 13 [2560/24098 (11%)] Loss: 0.000059
+Train Epoch: 13 [3072/24098 (13%)] Loss: 0.000065
+Train Epoch: 13 [3584/24098 (15%)] Loss: 0.000155
+Train Epoch: 13 [4096/24098 (17%)] Loss: 0.000035
+Train Epoch: 13 [4608/24098 (19%)] Loss: 0.000041
+Train Epoch: 13 [5120/24098 (21%)] Loss: 0.000125
+Train Epoch: 13 [5632/24098 (23%)] Loss: 0.000026
+Train Epoch: 13 [6144/24098 (25%)] Loss: 0.000101
+Train Epoch: 13 [6656/24098 (28%)] Loss: 0.000153
+Train Epoch: 13 [7168/24098 (30%)] Loss: 0.000063
+Train Epoch: 13 [7680/24098 (32%)] Loss: 0.000082
+Train Epoch: 13 [8192/24098 (34%)] Loss: 0.000073
+Train Epoch: 13 [8704/24098 (36%)] Loss: 0.000111
+Train Epoch: 13 [9216/24098 (38%)] Loss: 0.000118
+Train Epoch: 13 [9728/24098 (40%)] Loss: 0.000029
+Train Epoch: 13 [10240/24098 (42%)] Loss: 0.000116
+Train Epoch: 13 [10752/24098 (45%)] Loss: 0.000065
+Train Epoch: 13 [11264/24098 (47%)] Loss: 0.000096
+Train Epoch: 13 [11776/24098 (49%)] Loss: 0.000063
+Train Epoch: 13 [12288/24098 (51%)] Loss: 0.000112
+Train Epoch: 13 [12800/24098 (53%)] Loss: 0.000182
+Train Epoch: 13 [13312/24098 (55%)] Loss: 0.000088
+Train Epoch: 13 [13824/24098 (57%)] Loss: 0.000074
+Train Epoch: 13 [14336/24098 (59%)] Loss: 0.000037
+Train Epoch: 13 [14848/24098 (62%)] Loss: 0.000074
+Train Epoch: 13 [15360/24098 (64%)] Loss: 0.000080
+Train Epoch: 13 [15872/24098 (66%)] Loss: 0.000271
+Train Epoch: 13 [16384/24098 (68%)] Loss: 0.000053
+Train Epoch: 13 [16896/24098 (70%)] Loss: 0.000109
+Train Epoch: 13 [17408/24098 (72%)] Loss: 0.000081
+Train Epoch: 13 [17920/24098 (74%)] Loss: 0.000064
+Train Epoch: 13 [18432/24098 (76%)] Loss: 0.000093
+Train Epoch: 13 [18944/24098 (79%)] Loss: 0.000039
+Train Epoch: 13 [19456/24098 (81%)] Loss: 0.000039
+Train Epoch: 13 [19968/24098 (83%)] Loss: 0.000126
+Train Epoch: 13 [20480/24098 (85%)] Loss: 0.000108
+Train Epoch: 13 [20992/24098 (87%)] Loss: 0.000039
+Train Epoch: 13 [21504/24098 (89%)] Loss: 0.000029
+Train Epoch: 13 [22016/24098 (91%)] Loss: 0.000068
+Train Epoch: 13 [22528/24098 (93%)] Loss: 0.000094
+Train Epoch: 13 [23040/24098 (96%)] Loss: 0.000202
+Train Epoch: 13 [23552/24098 (98%)] Loss: 0.000056
+Train Epoch: 13 [24064/24098 (100%)] Loss: 0.000156
+[t2v_metrics]MovieClips epoch 13, R@1: 7.6, R@5: 19.5, R@10 26.7, R@50 49.0MedR: 54, MeanR: 251.3
+[v2t_metrics]MovieClips epoch 13, R@1: 8.0, R@5: 20.4, R@10 28.0, R@50 48.8MedR: 55, MeanR: 242.2
+    epoch          : 13
+    loss           : 9.2459100431886e-05
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.028131725266575813
+    val_t2v_metrics_R1: 7.619047619047619
+    val_t2v_metrics_R5: 19.523809523809526
+    val_t2v_metrics_R10: 26.726190476190474
+    val_t2v_metrics_R50: 48.958333333333336
+    val_t2v_metrics_MedR: 54.0
+    val_t2v_metrics_MeanR: 251.2565476190476
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.841662979251065
+    val_v2t_metrics_R1: 7.976190476190476
+    val_v2t_metrics_R5: 20.357142857142858
+    val_v2t_metrics_R10: 28.035714285714285
+    val_v2t_metrics_R50: 48.839285714285715
+    val_v2t_metrics_MedR: 55.0
+    val_v2t_metrics_MeanR: 242.2046130952381
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.573261724971204
+Saving checkpoint: saved/models/MoEE/0510_174057/checkpoint-epoch13.pth ...
+Train Epoch: 14 [0/24098 (0%)] Loss: 0.000056
+Train Epoch: 14 [512/24098 (2%)] Loss: 0.000049
+Train Epoch: 14 [1024/24098 (4%)] Loss: 0.000089
+Train Epoch: 14 [1536/24098 (6%)] Loss: 0.000127
+Train Epoch: 14 [2048/24098 (8%)] Loss: 0.000041
+Train Epoch: 14 [2560/24098 (11%)] Loss: 0.000041
+Train Epoch: 14 [3072/24098 (13%)] Loss: 0.000090
+Train Epoch: 14 [3584/24098 (15%)] Loss: 0.000114
+Train Epoch: 14 [4096/24098 (17%)] Loss: 0.000037
+Train Epoch: 14 [4608/24098 (19%)] Loss: 0.000065
+Train Epoch: 14 [5120/24098 (21%)] Loss: 0.000063
+Train Epoch: 14 [5632/24098 (23%)] Loss: 0.000051
+Train Epoch: 14 [6144/24098 (25%)] Loss: 0.000094
+Train Epoch: 14 [6656/24098 (28%)] Loss: 0.000019
+Train Epoch: 14 [7168/24098 (30%)] Loss: 0.000068
+Train Epoch: 14 [7680/24098 (32%)] Loss: 0.000041
+Train Epoch: 14 [8192/24098 (34%)] Loss: 0.000114
+Train Epoch: 14 [8704/24098 (36%)] Loss: 0.000055
+Train Epoch: 14 [9216/24098 (38%)] Loss: 0.000088
+Train Epoch: 14 [9728/24098 (40%)] Loss: 0.000077
+Train Epoch: 14 [10240/24098 (42%)] Loss: 0.000052
+Train Epoch: 14 [10752/24098 (45%)] Loss: 0.000077
+Train Epoch: 14 [11264/24098 (47%)] Loss: 0.000231
+Train Epoch: 14 [11776/24098 (49%)] Loss: 0.000092
+Train Epoch: 14 [12288/24098 (51%)] Loss: 0.000017
+Train Epoch: 14 [12800/24098 (53%)] Loss: 0.000057
+Train Epoch: 14 [13312/24098 (55%)] Loss: 0.000141
+Train Epoch: 14 [13824/24098 (57%)] Loss: 0.000063
+Train Epoch: 14 [14336/24098 (59%)] Loss: 0.000018
+Train Epoch: 14 [14848/24098 (62%)] Loss: 0.000116
+Train Epoch: 14 [15360/24098 (64%)] Loss: 0.000061
+Train Epoch: 14 [15872/24098 (66%)] Loss: 0.000046
+Train Epoch: 14 [16384/24098 (68%)] Loss: 0.000071
+Train Epoch: 14 [16896/24098 (70%)] Loss: 0.000048
+Train Epoch: 14 [17408/24098 (72%)] Loss: 0.000029
+Train Epoch: 14 [17920/24098 (74%)] Loss: 0.000107
+Train Epoch: 14 [18432/24098 (76%)] Loss: 0.000064
+Train Epoch: 14 [18944/24098 (79%)] Loss: 0.000107
+Train Epoch: 14 [19456/24098 (81%)] Loss: 0.000061
+Train Epoch: 14 [19968/24098 (83%)] Loss: 0.000057
+Train Epoch: 14 [20480/24098 (85%)] Loss: 0.000128
+Train Epoch: 14 [20992/24098 (87%)] Loss: 0.000140
+Train Epoch: 14 [21504/24098 (89%)] Loss: 0.000059
+Train Epoch: 14 [22016/24098 (91%)] Loss: 0.000112
+Train Epoch: 14 [22528/24098 (93%)] Loss: 0.000060
+Train Epoch: 14 [23040/24098 (96%)] Loss: 0.000043
+Train Epoch: 14 [23552/24098 (98%)] Loss: 0.000063
+Train Epoch: 14 [24064/24098 (100%)] Loss: 0.000157
+[t2v_metrics]MovieClips epoch 14, R@1: 7.7, R@5: 19.3, R@10 27.1, R@50 48.5MedR: 55.5, MeanR: 253.3
+[v2t_metrics]MovieClips epoch 14, R@1: 8.0, R@5: 20.2, R@10 27.6, R@50 48.7MedR: 55, MeanR: 246.0
+    epoch          : 14
+    loss           : 8.408499792644267e-05
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.028726395219564438
+    val_t2v_metrics_R1: 7.708333333333333
+    val_t2v_metrics_R5: 19.25595238095238
+    val_t2v_metrics_R10: 27.113095238095237
+    val_t2v_metrics_R50: 48.45238095238095
+    val_t2v_metrics_MedR: 55.5
+    val_t2v_metrics_MeanR: 253.31875
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 15.906264375547861
+    val_v2t_metrics_R1: 8.035714285714286
+    val_v2t_metrics_R5: 20.238095238095237
+    val_v2t_metrics_R10: 27.589285714285715
+    val_v2t_metrics_R50: 48.69047619047619
+    val_v2t_metrics_MedR: 55.0
+    val_v2t_metrics_MeanR: 246.03154761904761
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 16.493450685237974
+Validation performance didn't improve for 10 epochs. Training stops.

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home2/debashish.roy/miniconda3/envs/IS/bin/jupyter-notebook", line 5, in <module>
+    from notebook.notebookapp import main
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/notebook/notebookapp.py", line 43, in <module>
+    from jinja2 import Environment, FileSystemLoader
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/jinja2/__init__.py", line 8, in <module>
+    from .environment import Environment as Environment
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/jinja2/environment.py", line 14, in <module>
+    from markupsafe import Markup
+ModuleNotFoundError: No module named 'markupsafe'

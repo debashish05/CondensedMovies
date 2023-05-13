@@ -55,6 +55,19 @@ class MoEE(BaseModel):
         res = F.softmax(self.moe_fc(text), dim=-1)
         return res
 
+    def rowForward(self, x):
+        '''
+        :param x: Dictionary of experts and one of the experts 'label'.
+                Each expert has keys 'ftr', 'missing' and 'n_tokens'
+                x[expert]['ftr']: "b x clips x ftr" OR
+                                    "b x clips x n_tokens x ftr"
+
+                x[expert]['missing']: b x clips   boolean tensor, True if expert is missing for that clip
+                x[expert]['n_tokens']: number of actual tokens for that expert in that clip (we need this because of padding)
+        '''
+        pass
+
+
     def forward(self, x, evaluation=False, debug=False):
         '''
         :param x: Dictionary of experts and one of the experts 'label'.

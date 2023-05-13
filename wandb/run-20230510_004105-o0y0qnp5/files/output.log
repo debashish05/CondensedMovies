@@ -1,0 +1,178 @@
+loading features >>> [Total: 1.2s] (gnode086:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 3.0% of system memory 3.0 GB/131.0 GB
+loading features >>> [Total: 35.5s] (gnode086:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+loading features >>> [Total: 1.2s] (gnode086:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 6.3% of system memory 7.4 GB/126.6 GB
+loading features >>> [Total: 1.3s] (gnode086:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 6.4% of system memory 7.5 GB/126.5 GB
+loading features >>> [Total: 16.9s] (gnode086:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 7.8% of system memory 9.4 GB/124.6 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 7.8% of system memory 9.5 GB/124.5 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+train size: 24098 clips
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (scene): MeanToken()
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (s3d): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=21, bias=True)
+)
+Trainable parameters: 50541651
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.121227
+Traceback (most recent call last):
+  File "train.py", line 86, in <module>
+    main(config)
+  File "train.py", line 57, in main
+    trainer.train()
+  File "/home2/debashish.roy/CondensedMovies/base/base_trainer.py", line 68, in train
+    result = self._train_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 73, in _train_epoch
+    output = self.model(minibatch)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home2/debashish.roy/CondensedMovies/model/model.py", line 81, in forward
+    ftr=self.aggregation[expert](ftr, x[expert]['n_tokens'])
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home2/debashish.roy/CondensedMovies/model/net_vlad.py", line 55, in forward
+    self.sanity_checks(x)
+  File "/home2/debashish.roy/CondensedMovies/model/net_vlad.py", line 95, in sanity_checks
+    if th.isnan(self.clusters[0][0]):
+KeyboardInterrupt

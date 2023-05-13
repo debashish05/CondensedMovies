@@ -37,9 +37,9 @@
         "args": {
             "data_dir": "data",
             "metadata_dir": "data/metadata",
-            "batch_size": 64,
+            "batch_size": 128,
             "shuffle": true,
-            "num_workers": 4,
+            "num_workers": 2,
             "label": "description",
 
             "experts_used": {
@@ -78,7 +78,7 @@
     "optimizer": {
         "type": "Adam",
         "args":{
-            "lr": 0.0003,
+            "lr": 0.00003,
             "weight_decay": 0,
             "amsgrad": true
         }
@@ -103,12 +103,12 @@
         }
     },
     "trainer": {
-        "epochs": 100,
-        "save_dir": "saved",
+        "epochs": 2,
+        "save_dir": "FRSSVS",
         "save_period": 1,
         "verbosity": 2,
         "monitor": "min val_loss",
-        "early_stop": 4,
+        "early_stop": 5,
         "tensorboard": false,
         "retrieval": "inter"
     }

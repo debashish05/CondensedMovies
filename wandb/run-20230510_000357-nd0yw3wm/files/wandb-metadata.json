@@ -1,0 +1,247 @@
+{
+    "os": "Linux-4.15.0-210-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.10",
+    "heartbeatAt": "2023-05-09T18:34:00.274673",
+    "startedAt": "2023-05-09T18:33:57.048073",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "configs/moe.json"
+    ],
+    "state": "running",
+    "program": "/home2/debashish.roy/CondensedMovies/train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/debashish05/CondensedMovies.git",
+        "commit": "2714a1dc9573dcbf4f84a55c38297827b89f67cd"
+    },
+    "email": "debashish.roy1998@gmail.com",
+    "root": "/home2/debashish.roy/CondensedMovies",
+    "host": "gnode086",
+    "username": "debashish.roy",
+    "executable": "/home2/debashish.roy/miniconda3/envs/IS/bin/python",
+    "cpu_count": 20,
+    "cpu_count_logical": 40,
+    "cpu_freq": {
+        "current": 2341.935599999999,
+        "min": 1200.0,
+        "max": 3400.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2684.007,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2628.957,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2683.745,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2683.611,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2683.481,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2683.368,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2699.093,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2696.964,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.592,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1254.242,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2612.935,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2613.91,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2614.884,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2615.898,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2616.913,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2617.936,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2618.996,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1843.247,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1302.67,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1201.14,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2704.659,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2684.982,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2709.771,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2696.546,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2697.776,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2697.322,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2687.623,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2686.89,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.139,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1240.114,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2661.04,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2701.587,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2692.854,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2597.802,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2669.186,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2600.086,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 2600.342,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1200.497,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1203.639,
+            "min": 1200.0,
+            "max": 3400.0
+        },
+        {
+            "current": 1202.136,
+            "min": 1200.0,
+            "max": 3400.0
+        }
+    ],
+    "disk": {
+        "total": 219.00129318237305,
+        "used": 71.99044799804688
+    },
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 125.78221893310547
+    }
+}

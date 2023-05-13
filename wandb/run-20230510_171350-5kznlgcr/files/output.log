@@ -1,0 +1,208 @@
+loading features >>> [Total: 1.3s] (gnode086:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 4.8% of system memory 5.3 GB/128.6 GB
+loading features >>> [Total: 35.4s] (gnode086:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+loading features >>> [Total: 0.6s] (gnode086:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 7.9% of system memory 9.6 GB/124.4 GB
+loading features >>> [Total: 1.2s] (gnode086:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 8.0% of system memory 9.7 GB/124.2 GB
+loading features >>> [Total: 1.4s] (gnode086:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 8.1% of system memory 9.9 GB/124.1 GB
+loading features >>> [Total: 17.4s] (gnode086:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 9.5% of system memory 11.8 GB/122.2 GB
+train size: 24098 clips
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+>>> Currently using 9.6% of system memory 11.8 GB/122.2 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (scene): MeanToken()
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=15, bias=True)
+)
+Trainable parameters: 37891137
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.120941
+Train Epoch: 1 [512/24098 (2%)] Loss: 0.121247
+Train Epoch: 1 [1024/24098 (4%)] Loss: 0.121068
+Train Epoch: 1 [1536/24098 (6%)] Loss: 0.121753
+Train Epoch: 1 [2048/24098 (8%)] Loss: 0.121304
+Train Epoch: 1 [2560/24098 (11%)] Loss: 0.120618
+Train Epoch: 1 [3072/24098 (13%)] Loss: 0.121242
+Train Epoch: 1 [3584/24098 (15%)] Loss: 0.121259
+Train Epoch: 1 [4096/24098 (17%)] Loss: 0.121717
+Train Epoch: 1 [4608/24098 (19%)] Loss: 0.121554
+Train Epoch: 1 [5120/24098 (21%)] Loss: 0.121670
+Train Epoch: 1 [5632/24098 (23%)] Loss: 0.121170
+Train Epoch: 1 [6144/24098 (25%)] Loss: 0.121106
+Train Epoch: 1 [6656/24098 (28%)] Loss: 0.121121
+Train Epoch: 1 [7168/24098 (30%)] Loss: 0.121396
+Train Epoch: 1 [7680/24098 (32%)] Loss: 0.121261
+Train Epoch: 1 [8192/24098 (34%)] Loss: 0.121200
+Train Epoch: 1 [8704/24098 (36%)] Loss: 0.120902
+Train Epoch: 1 [9216/24098 (38%)] Loss: 0.121153
+Train Epoch: 1 [9728/24098 (40%)] Loss: 0.120366
+Train Epoch: 1 [10240/24098 (42%)] Loss: 0.121417
+Train Epoch: 1 [10752/24098 (45%)] Loss: 0.121455
+Train Epoch: 1 [11264/24098 (47%)] Loss: 0.121083
+Train Epoch: 1 [11776/24098 (49%)] Loss: 0.121043
+Train Epoch: 1 [12288/24098 (51%)] Loss: 0.121341
+Train Epoch: 1 [12800/24098 (53%)] Loss: 0.120882
+Train Epoch: 1 [13312/24098 (55%)] Loss: 0.121028
+Train Epoch: 1 [13824/24098 (57%)] Loss: 0.121315
+Train Epoch: 1 [14336/24098 (59%)] Loss: 0.120493
+Train Epoch: 1 [14848/24098 (62%)] Loss: 0.121178
+Train Epoch: 1 [15360/24098 (64%)] Loss: 0.120837
+Train Epoch: 1 [15872/24098 (66%)] Loss: 0.121202
+Train Epoch: 1 [16384/24098 (68%)] Loss: 0.120995
+Train Epoch: 1 [16896/24098 (70%)] Loss: 0.121403
+Train Epoch: 1 [17408/24098 (72%)] Loss: 0.121161
+Train Epoch: 1 [17920/24098 (74%)] Loss: 0.121431
+Train Epoch: 1 [18432/24098 (76%)] Loss: 0.121342
+Train Epoch: 1 [18944/24098 (79%)] Loss: 0.121298
+Train Epoch: 1 [19456/24098 (81%)] Loss: 0.121334
+Train Epoch: 1 [19968/24098 (83%)] Loss: 0.121342
+Train Epoch: 1 [20480/24098 (85%)] Loss: 0.120907
+Train Epoch: 1 [20992/24098 (87%)] Loss: 0.121341
+Train Epoch: 1 [21504/24098 (89%)] Loss: 0.121336
+Train Epoch: 1 [22016/24098 (91%)] Loss: 0.121184
+Train Epoch: 1 [22528/24098 (93%)] Loss: 0.120990
+Train Epoch: 1 [23040/24098 (96%)] Loss: 0.120755
+Train Epoch: 1 [23552/24098 (98%)] Loss: 0.121469
+Train Epoch: 1 [24064/24098 (100%)] Loss: 0.120597
+Traceback (most recent call last):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1120, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 921, in wait
+    ready = selector.select(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/_utils/signal_handling.py", line 66, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 24543) is killed by signal: Killed.
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "train.py", line 77, in <module>
+    main(config)
+  File "train.py", line 48, in main
+    trainer.train()
+  File "/home2/debashish.roy/CondensedMovies/base/base_trainer.py", line 68, in train
+    result = self._train_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 100, in _train_epoch
+    val_log = self._valid_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 133, in _valid_epoch
+    for batch_idx, (minibatch, id) in enumerate(self.valid_data_loader):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1133, in _try_get_data
+    raise RuntimeError('DataLoader worker (pid(s) {}) exited unexpectedly'.format(pids_str)) from e
+RuntimeError: DataLoader worker (pid(s) 24543) exited unexpectedly

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "train.py", line 86, in <module>
+    main(config)
+  File "train.py", line 28, in main
+    data_loader = config.initialize('data_loader', module_data)
+  File "/home2/debashish.roy/CondensedMovies/parse_config.py", line 85, in initialize
+    return getattr(module, module_name)(*args, **module_args)
+TypeError: __init__() got an unexpected keyword argument 'drop_last'

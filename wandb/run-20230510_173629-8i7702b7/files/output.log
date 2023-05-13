@@ -1,0 +1,117 @@
+loading features >>> [Total: 1.2s] (gnode086:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 5.3% of system memory 6.0 GB/128.0 GB
+loading features >>> [Total: 35.4s] (gnode086:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 8.4% of system memory 10.2 GB/123.7 GB
+loading features >>> [Total: 17.1s] (gnode086:data/features/BERT/bert-large-cased/speech/agg/agg.npy)
+>>> Currently using 9.7% of system memory 12.1 GB/121.9 GB
+train size: 24086 clips
+>>> Currently using 9.8% of system memory 12.1 GB/121.9 GB
+>>> Currently using 9.8% of system memory 12.1 GB/121.9 GB
+>>> Currently using 9.8% of system memory 12.1 GB/121.9 GB
+val size: 3359 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (speech): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (speech): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=6, bias=True)
+)
+Trainable parameters: 18178086
+Train Epoch: 1 [0/24086 (0%)] Loss: 0.120681
+Train Epoch: 1 [512/24086 (2%)] Loss: 0.121374
+Train Epoch: 1 [1024/24086 (4%)] Loss: 0.121797
+Train Epoch: 1 [1536/24086 (6%)] Loss: 0.121789
+Train Epoch: 1 [2048/24086 (9%)] Loss: 0.120809
+Train Epoch: 1 [2560/24086 (11%)] Loss: 0.120216
+Train Epoch: 1 [3072/24086 (13%)] Loss: 0.121043
+Train Epoch: 1 [3584/24086 (15%)] Loss: 0.121578
+Train Epoch: 1 [4096/24086 (17%)] Loss: 0.121153
+Train Epoch: 1 [4608/24086 (19%)] Loss: 0.121298
+Train Epoch: 1 [5120/24086 (21%)] Loss: 0.121712
+Train Epoch: 1 [5632/24086 (23%)] Loss: 0.120794
+Train Epoch: 1 [6144/24086 (26%)] Loss: 0.121009
+Train Epoch: 1 [6656/24086 (28%)] Loss: 0.120855
+Train Epoch: 1 [7168/24086 (30%)] Loss: 0.121035
+Train Epoch: 1 [7680/24086 (32%)] Loss: 0.121155
+Train Epoch: 1 [8192/24086 (34%)] Loss: 0.121049
+Train Epoch: 1 [8704/24086 (36%)] Loss: 0.120775
+Train Epoch: 1 [9216/24086 (38%)] Loss: 0.121185
+Train Epoch: 1 [9728/24086 (40%)] Loss: 0.121069
+Train Epoch: 1 [10240/24086 (43%)] Loss: 0.121085
+Train Epoch: 1 [10752/24086 (45%)] Loss: 0.120753
+Train Epoch: 1 [11264/24086 (47%)] Loss: 0.120140
+Train Epoch: 1 [11776/24086 (49%)] Loss: 0.121289
+Train Epoch: 1 [12288/24086 (51%)] Loss: 0.120537
+Train Epoch: 1 [12800/24086 (53%)] Loss: 0.120668
+Train Epoch: 1 [13312/24086 (55%)] Loss: 0.121259
+Train Epoch: 1 [13824/24086 (57%)] Loss: 0.121364
+Train Epoch: 1 [14336/24086 (60%)] Loss: 0.120902
+Train Epoch: 1 [14848/24086 (62%)] Loss: 0.121727
+Train Epoch: 1 [15360/24086 (64%)] Loss: 0.120761
+Train Epoch: 1 [15872/24086 (66%)] Loss: 0.121317
+Train Epoch: 1 [16384/24086 (68%)] Loss: 0.120256
+Train Epoch: 1 [16896/24086 (70%)] Loss: 0.120489
+Train Epoch: 1 [17408/24086 (72%)] Loss: 0.120752
+Train Epoch: 1 [17920/24086 (74%)] Loss: 0.120168
+Train Epoch: 1 [18432/24086 (77%)] Loss: 0.120340
+Train Epoch: 1 [18944/24086 (79%)] Loss: 0.121576
+Train Epoch: 1 [19456/24086 (81%)] Loss: 0.120316
+Train Epoch: 1 [19968/24086 (83%)] Loss: 0.121276
+Train Epoch: 1 [20480/24086 (85%)] Loss: 0.121335
+Train Epoch: 1 [20992/24086 (87%)] Loss: 0.121220
+Train Epoch: 1 [21504/24086 (89%)] Loss: 0.121371
+Train Epoch: 1 [22016/24086 (91%)] Loss: 0.120465
+Train Epoch: 1 [22528/24086 (94%)] Loss: 0.120763
+Train Epoch: 1 [23040/24086 (96%)] Loss: 0.120492
+Train Epoch: 1 [23552/24086 (98%)] Loss: 0.122203
