@@ -1,0 +1,229 @@
+loading features >>> [Total: 0.2s] (gnode012:data/features/BERT/bert-large-cased/clip_name/agg/agg.npy)
+>>> Currently using 2.6% of system memory 2.5 GB/131.5 GB
+loading features >>> [Total: 3.4s] (gnode012:data/features/BERT/bert-large-cased/description/agg/agg_word.npy)
+>>> Currently using 5.8% of system memory 6.7 GB/127.3 GB
+loading features >>> [Total: 0.1s] (gnode012:data/features/SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy)
+>>> Currently using 5.8% of system memory 6.8 GB/127.2 GB
+loading features >>> [Total: 0.2s] (gnode012:data/features/SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 5.9% of system memory 6.9 GB/127.1 GB
+loading features >>> [Total: 0.2s] (gnode012:data/features/DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy)
+>>> Currently using 6.0% of system memory 7.1 GB/126.9 GB
+loading features >>> [Total: 0.1s] (gnode012:data/features/I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy)
+>>> Currently using 6.1% of system memory 7.1 GB/126.9 GB
+train size: 24098 clips
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+>>> Currently using 6.1% of system memory 7.2 GB/126.8 GB
+val size: 3360 clips
+MoEE(
+  (aggregation): ModuleDict(
+    (label): NetVLAD(
+      (batch_norm): BatchNorm1d(10, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (face): MeanToken()
+    (scene): MeanToken()
+  )
+  (video_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=256, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2048, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=2208, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=1024, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (clip_GU): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (text_GU): ModuleDict(
+    (clip_name): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (description): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (face): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (rgb): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (scene): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (video): Gated_Embedding_Unit(
+      (fc): Linear(in_features=10240, out_features=512, bias=True)
+      (cg): Context_Gating(
+        (fc): Linear(in_features=512, out_features=512, bias=True)
+        (batch_norm): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (text_clip): ModuleList(
+    (0): Identity()
+    (1): Identity()
+    (2): Identity()
+  )
+  (moe_fc): Linear(in_features=10240, out_features=15, bias=True)
+)
+Trainable parameters: 37891137
+Train Epoch: 1 [0/24098 (0%)] Loss: 0.121084
+Train Epoch: 1 [1408/24098 (6%)] Loss: 0.121154
+Train Epoch: 1 [2816/24098 (12%)] Loss: 0.121058
+Train Epoch: 1 [4224/24098 (18%)] Loss: 0.121425
+Train Epoch: 1 [5632/24098 (23%)] Loss: 0.121329
+Train Epoch: 1 [7040/24098 (29%)] Loss: 0.121094
+Train Epoch: 1 [8448/24098 (35%)] Loss: 0.121538
+Train Epoch: 1 [9856/24098 (41%)] Loss: 0.121285
+Train Epoch: 1 [11264/24098 (47%)] Loss: 0.121037
+Train Epoch: 1 [12672/24098 (53%)] Loss: 0.121184
+Train Epoch: 1 [14080/24098 (58%)] Loss: 0.121167
+Train Epoch: 1 [15488/24098 (64%)] Loss: 0.120981
+Train Epoch: 1 [16896/24098 (70%)] Loss: 0.121191
+Train Epoch: 1 [18304/24098 (76%)] Loss: 0.121075
+Train Epoch: 1 [19712/24098 (82%)] Loss: 0.121207
+Train Epoch: 1 [21120/24098 (88%)] Loss: 0.121116
+Train Epoch: 1 [22528/24098 (93%)] Loss: 0.121390
+Train Epoch: 1 [23936/24098 (99%)] Loss: 0.121191
+[t2v_metrics]MovieClips epoch 1, R@1: 0.0, R@5: 0.2, R@10 0.4, R@50 1.4MedR: 1638, MeanR: 1657.9
+/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/scipy/stats/stats.py:275: RuntimeWarning: divide by zero encountered in log
+  log_a = np.log(np.array(a, dtype=dtype))
+[v2t_metrics]MovieClips epoch 1, R@1: 0.0, R@5: 0.0, R@10 0.0, R@50 1.5MedR: 1645, MeanR: 1658.1
+    epoch          : 1
+    loss           : 0.1212317778398751
+    t2v_metrics    : 0.0
+    v2t_metrics    : 0.0
+    val_loss       : 0.12119164317846298
+    val_t2v_metrics_R1: 0.0
+    val_t2v_metrics_R5: 0.20833333333333334
+    val_t2v_metrics_R10: 0.35714285714285715
+    val_t2v_metrics_R50: 1.4285714285714286
+    val_t2v_metrics_MedR: 1638.0
+    val_t2v_metrics_MeanR: 1657.8715773809524
+    val_t2v_metrics_geometric_mean_R1-R5-R10: 0.0
+    val_v2t_metrics_R1: 0.0
+    val_v2t_metrics_R5: 0.0
+    val_v2t_metrics_R10: 0.0
+    val_v2t_metrics_R50: 1.5178571428571428
+    val_v2t_metrics_MedR: 1645.0
+    val_v2t_metrics_MeanR: 1658.0604166666667
+    val_v2t_metrics_geometric_mean_R1-R5-R10: 0.0
+Saving checkpoint: FRS_V_-lr=3e-5+val_loss_medR/models/MoEE/0514_131100/checkpoint-epoch1.pth ...
+Saving current best: model_best.pth ...
+Train Epoch: 2 [0/24098 (0%)] Loss: 0.121459
+Train Epoch: 2 [1408/24098 (6%)] Loss: 0.106216
+Train Epoch: 2 [2816/24098 (12%)] Loss: 0.087574
+Train Epoch: 2 [4224/24098 (18%)] Loss: 0.060422
+Train Epoch: 2 [5632/24098 (23%)] Loss: 0.052516
+Train Epoch: 2 [7040/24098 (29%)] Loss: 0.047176
+Train Epoch: 2 [8448/24098 (35%)] Loss: 0.042439
+Train Epoch: 2 [9856/24098 (41%)] Loss: 0.040457
+Train Epoch: 2 [11264/24098 (47%)] Loss: 0.039516
+Train Epoch: 2 [12672/24098 (53%)] Loss: 0.033044
+Train Epoch: 2 [14080/24098 (58%)] Loss: 0.031520
+Train Epoch: 2 [15488/24098 (64%)] Loss: 0.035288
+Train Epoch: 2 [16896/24098 (70%)] Loss: 0.031652
+Train Epoch: 2 [18304/24098 (76%)] Loss: 0.032429
+Train Epoch: 2 [19712/24098 (82%)] Loss: 0.030108
+Train Epoch: 2 [21120/24098 (88%)] Loss: 0.027010
+Train Epoch: 2 [22528/24098 (93%)] Loss: 0.022554
+Train Epoch: 2 [23936/24098 (99%)] Loss: 0.025760
+Traceback (most recent call last):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/__main__.py", line 39, in <module>
+    cli.main()
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 430, in main
+    run()
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher/../../debugpy/../debugpy/server/cli.py", line 284, in run_file
+    runpy.run_path(target, run_name="__main__")
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 322, in run_path
+    pkg_name=pkg_name, script_name=fname)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 136, in _run_module_code
+    mod_name, mod_spec, pkg_name, script_name)
+  File "/home2/debashish.roy/.vscode-server/extensions/ms-python.python-2023.8.0/pythonFiles/lib/python/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_runpy.py", line 124, in _run_code
+    exec(code, run_globals)
+  File "/home2/debashish.roy/CondensedMovies/train.py", line 84, in <module>
+    main(config)
+  File "/home2/debashish.roy/CondensedMovies/train.py", line 55, in main
+    trainer.train()
+  File "/home2/debashish.roy/CondensedMovies/base/base_trainer.py", line 68, in train
+    result = self._train_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 100, in _train_epoch
+    val_log = self._valid_epoch(epoch)
+  File "/home2/debashish.roy/CondensedMovies/trainer/trainer.py", line 133, in _valid_epoch
+    for batch_idx, (minibatch, id) in enumerate(self.valid_data_loader):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1316, in _next_data
+    idx, data = self._get_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1282, in _get_data
+    success, data = self._try_get_data()
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/torch/utils/data/dataloader.py", line 1120, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/queues.py", line 104, in get
+    if not self._poll(timeout):
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 257, in poll
+    return self._poll(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 414, in _poll
+    r = wait([self], timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/multiprocessing/connection.py", line 921, in wait
+    ready = selector.select(timeout)
+  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/selectors.py", line 415, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

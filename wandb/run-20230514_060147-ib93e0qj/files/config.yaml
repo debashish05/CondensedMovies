@@ -1,0 +1,143 @@
+wandb_version: 1
+
+cfg_fname:
+  desc: null
+  value: configs/moe.json
+resume:
+  desc: null
+  value: null
+_config:
+  desc: null
+  value:
+    name: MoEE
+    n_gpu: 1
+    arch:
+      type: MoEE
+      args:
+        pretrained: ''
+        projection_dim: 512
+        use_moe: false
+        aggregation_method:
+          label:
+            type: net_vlad
+            cluster_size: 10
+            ghost_clusters: 0
+          description:
+            type: net_vlad
+            cluster_size: 10
+            ghost_clusters: 0
+          face:
+            type: mean
+          scene:
+            type: mean
+          speech:
+            type: mean
+            cluster_size: 0
+            ghost_clusters: 0
+    data_loader:
+      type: MovieClipsDataLoader
+      args:
+        data_dir: data
+        metadata_dir: data/metadata
+        batch_size: 128
+        shuffle: true
+        num_workers: 3
+        label: description
+        experts_used:
+          characters: false
+          clip_name: true
+          description: true
+          face: false
+          rgb: false
+          scene: true
+          speech: false
+          video: false
+          s3d: false
+        experts:
+          characters: ''
+          clip_name: BERT/bert-large-cased/clip_name/agg/agg.npy
+          context: ''
+          description: BERT/bert-large-cased/description/agg/agg_word.npy
+          face: SE-ResNet-50/256D_vgg_face2/agg/agg_feats_mean.npy
+          plot: BERT/bert-large-cased/plot/agg/agg.npy
+          rgb: SE-ResNet-154/pred_imagenet_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy
+          scene: DenseNet-161/pred_scene_25fps_256px_stride1_offset0/agg/agg_feats_mean.npy
+          speech: BERT/bert-large-cased/speech/agg/agg.npy
+          video: I3D/pred_i3d_25fps_256px_stride25_offset0_inner_stride1/agg/agg_feats_mean.npy
+          s3d: S3DG/pred_s3dg_10fps_256px_stride16_offset0_inner_stride1/agg/agg_feats_mean.npy
+        max_tokens:
+          description: 20
+          characters: 10
+          face: 5
+          plot: 60
+          speech: 20
+    optimizer:
+      type: Adam
+      args:
+        lr: 3.0e-05
+        weight_decay: 0
+        amsgrad: true
+    loss:
+      type: MaxMarginRankingLoss
+      args:
+        margin: 0.12132983763957966
+        fix_norm: true
+    metrics:
+    - t2v_metrics
+    - v2t_metrics
+    lr_scheduler:
+      type: StepLR
+      args:
+        step_size: 50
+        gamma: 0.1
+    trainer:
+      epochs: 100
+      save_dir: __S____lr=3e-5
+      save_period: 1
+      verbosity: 2
+      monitor: min val_t2v_metrics_MedR
+      early_stop: 5
+      tensorboard: false
+      retrieval: inter
+_save_dir:
+  desc: null
+  value: __S____lr=3e-5/models/MoEE/0514_060141
+_log_dir:
+  desc: null
+  value: __S____lr=3e-5/log/MoEE/0514_060141
+log_levels:
+  desc: null
+  value:
+    '0': 30
+    '1': 20
+    '2': 10
+_wandb:
+  desc: null
+  value:
+    python_version: 3.7.10
+    cli_version: 0.15.2
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1684024307.566503
+    t:
+      1:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 41
+      - 53
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.7.10
+      5: 0.15.2
+      8:
+      - 5

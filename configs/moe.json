@@ -39,7 +39,7 @@
             "metadata_dir": "data/metadata",
             "batch_size": 128,
             "shuffle": true,
-            "num_workers": 2,
+            "num_workers": 4,
             "label": "description",
 
             "experts_used": {
@@ -51,7 +51,7 @@
                 "scene": true,
                 "speech": true,
                 "video": true,
-                "s3d": true
+                "s3d": false
             },
             "experts": {
               "characters": "",
@@ -103,11 +103,11 @@
         }
     },
     "trainer": {
-        "epochs": 2,
-        "save_dir": "FRSSVS",
+        "epochs": 100,
+        "save_dir": "FRSSV_-lr=3e-5+val_loss_medR",
         "save_period": 1,
         "verbosity": 2,
-        "monitor": "min val_loss",
+        "monitor": "min val_t2v_metrics_MedR", 
         "early_stop": 5,
         "tensorboard": false,
         "retrieval": "inter"

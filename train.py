@@ -10,6 +10,13 @@ from trainer import Trainer
 import ipdb
 import os
 import wandb
+import random
+import numpy as np
+
+random.seed(0)
+np.random.seed(0)
+torch.manual_seed(0)
+#torch.use_deterministic_algorithms(True), it won't work because we use some algo that are not deterministic
 
 def main(config):
     logger = config.get_logger('train')
@@ -73,5 +80,5 @@ if __name__ == '__main__':
     #    CustomArgs(['--bs', '--batch_size'], type=int, target=('data_loader', 'args', 'batch_size'))
     #]
     config = ConfigParser(args)
-    wandb.init(project="condensed movies",config=config,name="FRSSVS+lr=0.00003")
+    wandb.init(project="condensed movies",config=config,name="FRSSV_-lr=3e-5+val_loss_medR")
     main(config)

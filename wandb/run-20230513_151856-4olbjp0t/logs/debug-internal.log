@@ -1,0 +1,489 @@
+2023-05-13 15:18:56,152 INFO    StreamThr :36638 [internal.py:wandb_internal():89] W&B internal server running at pid: 36638, started at: 2023-05-13 15:18:56.151370
+2023-05-13 15:18:56,159 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status
+2023-05-13 15:18:56,166 INFO    WriterThread:36638 [datastore.py:open_for_write():85] open: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/run-4olbjp0t.wandb
+2023-05-13 15:18:56,173 DEBUG   SenderThread:36638 [sender.py:send():375] send: header
+2023-05-13 15:18:56,186 DEBUG   SenderThread:36638 [sender.py:send():375] send: run
+2023-05-13 15:18:57,033 INFO    SenderThread:36638 [dir_watcher.py:__init__():219] watching files in: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files
+2023-05-13 15:18:57,034 INFO    SenderThread:36638 [sender.py:_start_run_threads():1127] run started: 4olbjp0t with start time 1683971336.14721
+2023-05-13 15:18:57,035 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: summary_record
+2023-05-13 15:18:57,037 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:18:57,048 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: check_version
+2023-05-13 15:18:57,049 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: check_version
+2023-05-13 15:18:57,192 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: run_start
+2023-05-13 15:18:58,044 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_created():278] file/dir created: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-summary.json
+2023-05-13 15:18:58,211 DEBUG   HandlerThread:36638 [system_info.py:__init__():31] System info init
+2023-05-13 15:18:58,211 DEBUG   HandlerThread:36638 [system_info.py:__init__():46] System info init done
+2023-05-13 15:18:58,212 INFO    HandlerThread:36638 [system_monitor.py:start():181] Starting system monitor
+2023-05-13 15:18:58,213 INFO    HandlerThread:36638 [system_monitor.py:probe():201] Collecting system info
+2023-05-13 15:18:58,214 INFO    SystemMonitor:36638 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-13 15:18:58,217 INFO    SystemMonitor:36638 [interfaces.py:start():190] Started cpu monitoring
+2023-05-13 15:18:58,222 INFO    SystemMonitor:36638 [interfaces.py:start():190] Started disk monitoring
+2023-05-13 15:18:58,226 INFO    SystemMonitor:36638 [interfaces.py:start():190] Started gpu monitoring
+2023-05-13 15:18:58,233 INFO    SystemMonitor:36638 [interfaces.py:start():190] Started memory monitoring
+2023-05-13 15:18:58,237 INFO    SystemMonitor:36638 [interfaces.py:start():190] Started network monitoring
+2023-05-13 15:18:59,069 DEBUG   HandlerThread:36638 [system_info.py:probe():195] Probing system
+2023-05-13 15:18:59,072 DEBUG   HandlerThread:36638 [system_info.py:_probe_git():180] Probing git
+2023-05-13 15:18:59,114 DEBUG   HandlerThread:36638 [system_info.py:_probe_git():188] Probing git done
+2023-05-13 15:18:59,115 DEBUG   HandlerThread:36638 [system_info.py:probe():240] Probing system done
+2023-05-13 15:18:59,115 DEBUG   HandlerThread:36638 [system_monitor.py:probe():210] {'os': 'Linux-4.15.0-210-generic-x86_64-with-debian-buster-sid', 'python': '3.7.10', 'heartbeatAt': '2023-05-13T09:48:59.069946', 'startedAt': '2023-05-13T09:48:56.114593', 'docker': None, 'cuda': None, 'args': ('configs/moe.json',), 'state': 'running', 'program': '/home2/debashish.roy/CondensedMovies/train.py', 'codePath': 'train.py', 'git': {'remote': 'https://github.com/debashish05/CondensedMovies.git', 'commit': '707296d8a2621db80a82cf5a0dae0b33cddeee1d'}, 'email': 'debashish.roy1998@gmail.com', 'root': '/home2/debashish.roy/CondensedMovies', 'host': 'gnode046', 'username': 'debashish.roy', 'executable': '/home2/debashish.roy/miniconda3/envs/IS/bin/python', 'cpu_count': 20, 'cpu_count_logical': 40, 'cpu_freq': {'current': 1206.3743499999998, 'min': 1200.0, 'max': 3400.0}, 'cpu_freq_per_core': [{'current': 1202.792, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.612, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.858, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.108, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.534, 'min': 1200.0, 'max': 3400.0}, {'current': 2382.033, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.531, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.567, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.873, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.795, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.479, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.467, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.392, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.576, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.522, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.49, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.637, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.212, 'min': 1200.0, 'max': 3400.0}, {'current': 1519.528, 'min': 1200.0, 'max': 3400.0}, {'current': 1202.758, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.453, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.036, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.492, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.351, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.588, 'min': 1200.0, 'max': 3400.0}, {'current': 2122.638, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.093, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.019, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.365, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.25, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.055, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.562, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.713, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.267, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.31, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.059, 'min': 1200.0, 'max': 3400.0}, {'current': 1201.227, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.71, 'min': 1200.0, 'max': 3400.0}, {'current': 1482.259, 'min': 1200.0, 'max': 3400.0}, {'current': 1200.458, 'min': 1200.0, 'max': 3400.0}], 'disk': {'total': 219.00129318237305, 'used': 71.72237777709961}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}, {'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.78214263916016}}
+2023-05-13 15:18:59,116 INFO    HandlerThread:36638 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-13 15:18:59,117 INFO    HandlerThread:36638 [system_monitor.py:probe():214] Publishing system info
+2023-05-13 15:18:59,117 DEBUG   HandlerThread:36638 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-05-13 15:18:59,124 DEBUG   HandlerThread:36638 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-13 15:18:59,124 DEBUG   HandlerThread:36638 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-05-13 15:19:00,038 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_created():278] file/dir created: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/conda-environment.yaml
+2023-05-13 15:19:00,039 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_created():278] file/dir created: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/requirements.txt
+2023-05-13 15:19:07,570 DEBUG   HandlerThread:36638 [system_info.py:_save_conda():86] Saving conda packages done
+2023-05-13 15:19:07,583 INFO    HandlerThread:36638 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-13 15:19:07,595 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:07,595 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: keepalive
+2023-05-13 15:19:07,596 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:07,597 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: keepalive
+2023-05-13 15:19:07,599 DEBUG   SenderThread:36638 [sender.py:send():375] send: files
+2023-05-13 15:19:07,599 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-13 15:19:07,624 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:19:07,625 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:19:08,016 DEBUG   SenderThread:36638 [sender.py:send():375] send: telemetry
+2023-05-13 15:19:08,280 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/conda-environment.yaml
+2023-05-13 15:19:08,280 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_created():278] file/dir created: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:19:08,377 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_created():278] file/dir created: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-metadata.json
+2023-05-13 15:19:08,738 INFO    wandb-upload_0:36638 [upload_job.py:push():137] Uploaded file /tmp/tmpmknwphmswandb/0xyuw0jd-wandb-metadata.json
+2023-05-13 15:19:10,365 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:19:13,134 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:18,135 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:22,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:19:22,720 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:19:23,137 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:28,153 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:29,226 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/config.yaml
+2023-05-13 15:19:34,164 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:37,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:19:37,677 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:19:40,141 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:46,136 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:46,592 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:19:48,714 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:19:51,716 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:52,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:19:52,622 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:19:57,119 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:19:58,238 DEBUG   SystemMonitor:36638 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-05-13 15:19:58,244 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:20:02,308 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:07,287 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:07,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:20:07,622 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:20:07,931 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:09,290 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:13,541 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:15,317 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:18,543 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:22,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:20:22,623 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:20:23,940 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:25,331 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:28,250 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:20:29,253 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:34,254 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:37,346 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:37,621 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:20:37,623 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:20:39,929 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:44,931 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:47,359 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:20:50,660 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:52,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:20:52,624 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:20:55,944 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:20:58,255 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:20:59,374 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:01,259 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:06,260 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:07,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:21:07,624 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:21:09,386 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:11,954 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:16,955 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:21,401 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:22,481 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:22,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:21:22,623 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:21:27,919 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:28,261 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:21:31,415 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:33,434 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:37,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:21:37,624 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:21:38,934 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:41,428 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:44,900 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:49,902 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:52,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:21:52,623 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:21:53,443 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:21:54,942 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:21:58,267 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:22:00,270 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:03,457 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:05,306 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:07,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:22:07,624 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:22:10,921 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:13,470 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:16,400 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:21,402 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:22,622 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:22:22,624 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:22:25,485 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:26,970 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:28,272 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:22:32,276 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:35,498 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:37,623 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:22:37,625 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:22:37,936 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:42,938 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:45,512 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:48,591 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:52,623 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:22:52,625 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:22:53,938 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:22:57,528 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:22:58,278 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:22:59,281 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:04,282 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:07,541 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:23:07,623 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:23:07,626 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:23:09,958 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:14,959 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:19,556 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:23:20,063 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:22,624 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:23:22,626 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:23:25,938 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:28,283 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:23:31,286 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:36,287 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:37,624 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:23:37,626 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:23:41,926 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:46,928 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:51,930 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:52,624 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:23:52,626 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:23:56,931 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:23:58,288 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:24:02,292 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:06,644 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-13 15:24:06,652 DEBUG   SenderThread:36638 [sender.py:send():375] send: history
+2023-05-13 15:24:06,653 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: summary_record
+2023-05-13 15:24:06,654 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:24:07,655 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:07,838 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-summary.json
+2023-05-13 15:24:07,838 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:08,746 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:24:08,748 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:24:08,923 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:10,103 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:11,104 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:12,683 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:15,246 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:18,640 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:23,641 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:23,740 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:24:23,742 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:24:27,259 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:28,293 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:24:29,296 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:34,298 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:37,270 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:38,740 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:24:38,742 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:24:40,038 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:45,040 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:47,281 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:24:50,860 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:53,741 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:24:53,742 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:24:56,048 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:24:58,302 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:24:59,293 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:01,305 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:06,306 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:08,741 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:25:08,742 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:25:09,304 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:12,051 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:17,052 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:19,314 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:22,842 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:23,741 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:25:23,743 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:25:28,056 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:28,307 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:25:31,326 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:33,802 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:38,741 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:25:38,743 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:25:39,051 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:41,338 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:44,368 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:49,369 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:53,351 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:25:53,741 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:25:53,743 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:25:55,041 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:25:58,312 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:26:00,316 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:03,361 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:05,887 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:08,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:26:08,745 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:26:11,058 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:13,373 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:16,716 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:21,718 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:23,744 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:26:23,745 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:26:25,390 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:27,050 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:28,318 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:26:32,322 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:35,403 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:38,033 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:38,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:26:38,744 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:26:43,060 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:45,417 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:48,807 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:53,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:26:53,744 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:26:54,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:26:55,430 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:26:58,323 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:26:59,325 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:04,327 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:07,446 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:27:08,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:27:08,744 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:27:10,055 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:15,056 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:17,458 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:27:20,427 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:23,744 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:27:23,746 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:27:26,044 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:28,329 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:27:31,332 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:36,334 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:38,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:27:38,744 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:27:42,050 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:47,052 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:52,053 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:53,743 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:27:53,745 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:27:58,044 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:27:58,334 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:28:03,338 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:08,026 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-13 15:28:08,031 DEBUG   SenderThread:36638 [sender.py:send():375] send: history
+2023-05-13 15:28:08,032 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: summary_record
+2023-05-13 15:28:08,034 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:28:08,652 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-summary.json
+2023-05-13 15:28:09,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:10,183 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:14,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:18,981 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:28:18,982 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:28:19,292 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:22,854 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:24,293 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:28,337 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:28:29,339 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:30,037 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:28:30,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:28:32,014 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:34,501 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:36,021 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:39,502 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:45,034 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:28:45,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:45,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:28:46,038 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:50,355 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:55,357 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:28:58,054 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:28:58,341 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:29:00,033 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:29:00,035 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:29:01,345 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:06,346 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:08,067 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:29:11,435 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:15,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:29:15,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:29:17,187 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:18,079 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:29:22,188 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:27,190 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:28,347 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:29:30,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:29:30,036 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:29:30,093 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:29:32,341 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:37,342 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:40,105 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:29:42,497 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:45,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:29:45,036 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:29:48,341 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:50,117 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:29:54,187 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:29:58,352 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:29:59,355 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:00,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:30:00,036 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:30:02,131 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:05,348 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:10,349 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:12,144 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:15,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:30:15,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:30:16,344 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:21,977 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:22,155 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:26,979 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:28,358 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:30:30,035 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:30:30,037 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:30:32,747 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:34,169 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:37,749 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:43,245 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:44,183 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:45,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:30:45,037 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:30:48,335 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:53,757 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:30:54,199 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:30:58,364 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:30:59,367 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:00,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:31:00,037 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:31:04,952 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:06,218 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:31:09,953 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:15,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:15,037 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:31:15,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:31:16,233 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:31:20,343 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:26,045 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:26,249 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:31:28,369 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:31:30,036 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:31:30,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:31:31,355 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:36,264 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:31:36,455 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:41,456 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:45,037 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:31:45,039 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:31:47,337 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:52,339 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:57,340 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:31:58,375 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:32:00,037 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:32:00,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:32:02,348 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:07,349 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:12,351 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:15,037 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:32:15,038 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:32:18,337 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:23,338 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:26,513 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-13 15:32:26,519 DEBUG   SenderThread:36638 [sender.py:send():375] send: history
+2023-05-13 15:32:26,520 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: summary_record
+2023-05-13 15:32:26,523 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:32:27,437 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-summary.json
+2023-05-13 15:32:28,381 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:32:28,391 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:28,756 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:32:33,176 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-13 15:32:33,177 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: stop_status
+2023-05-13 15:32:33,470 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:34,487 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:32:38,471 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:40,413 DEBUG   SenderThread:36638 [sender.py:send():375] send: exit
+2023-05-13 15:32:40,414 INFO    SenderThread:36638 [sender.py:send_exit():598] handling exit code: 0
+2023-05-13 15:32:40,415 INFO    SenderThread:36638 [sender.py:send_exit():600] handling runtime: 823
+2023-05-13 15:32:40,417 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:32:40,417 INFO    SenderThread:36638 [sender.py:send_exit():606] send defer
+2023-05-13 15:32:40,418 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,418 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 0
+2023-05-13 15:32:40,420 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,420 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 0
+2023-05-13 15:32:40,420 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 1
+2023-05-13 15:32:40,422 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,423 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 1
+2023-05-13 15:32:40,424 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,424 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 1
+2023-05-13 15:32:40,424 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 2
+2023-05-13 15:32:40,425 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,425 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 2
+2023-05-13 15:32:40,425 INFO    HandlerThread:36638 [system_monitor.py:finish():190] Stopping system monitor
+2023-05-13 15:32:40,427 DEBUG   SystemMonitor:36638 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-05-13 15:32:40,427 DEBUG   SystemMonitor:36638 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-05-13 15:32:40,432 INFO    HandlerThread:36638 [interfaces.py:finish():202] Joined cpu monitor
+2023-05-13 15:32:40,433 INFO    HandlerThread:36638 [interfaces.py:finish():202] Joined disk monitor
+2023-05-13 15:32:40,563 INFO    HandlerThread:36638 [interfaces.py:finish():202] Joined gpu monitor
+2023-05-13 15:32:40,564 INFO    HandlerThread:36638 [interfaces.py:finish():202] Joined memory monitor
+2023-05-13 15:32:40,565 INFO    HandlerThread:36638 [interfaces.py:finish():202] Joined network monitor
+2023-05-13 15:32:40,567 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,567 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 2
+2023-05-13 15:32:40,568 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 3
+2023-05-13 15:32:40,568 DEBUG   SenderThread:36638 [sender.py:send():375] send: stats
+2023-05-13 15:32:40,568 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,570 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 3
+2023-05-13 15:32:40,571 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,571 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 3
+2023-05-13 15:32:40,571 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 4
+2023-05-13 15:32:40,572 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,572 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 4
+2023-05-13 15:32:40,573 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,573 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 4
+2023-05-13 15:32:40,573 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 5
+2023-05-13 15:32:40,574 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,574 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 5
+2023-05-13 15:32:40,576 DEBUG   SenderThread:36638 [sender.py:send():375] send: summary
+2023-05-13 15:32:40,577 INFO    SenderThread:36638 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-13 15:32:40,577 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,578 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 5
+2023-05-13 15:32:40,578 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 6
+2023-05-13 15:32:40,578 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,579 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 6
+2023-05-13 15:32:40,579 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,579 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 6
+2023-05-13 15:32:40,580 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 7
+2023-05-13 15:32:40,580 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: status_report
+2023-05-13 15:32:40,580 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:40,581 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 7
+2023-05-13 15:32:40,582 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:40,582 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 7
+2023-05-13 15:32:41,088 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/wandb-summary.json
+2023-05-13 15:32:41,423 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: poll_exit
+2023-05-13 15:32:42,089 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log
+2023-05-13 15:32:43,369 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 8
+2023-05-13 15:32:43,372 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: poll_exit
+2023-05-13 15:32:43,373 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:43,374 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 8
+2023-05-13 15:32:43,376 DEBUG   SenderThread:36638 [sender.py:send_request():402] send_request: defer
+2023-05-13 15:32:43,376 INFO    SenderThread:36638 [sender.py:send_request_defer():622] handle sender defer: 8
+2023-05-13 15:32:43,515 INFO    SenderThread:36638 [sender.py:transition_state():626] send defer: 9
+2023-05-13 15:32:43,517 DEBUG   HandlerThread:36638 [handler.py:handle_request():144] handle_request: defer
+2023-05-13 15:32:43,517 INFO    HandlerThread:36638 [handler.py:handle_request_defer():170] handle defer: 9
+2023-05-13 15:32:43,517 DEBUG   SenderThread:36638 [sender.py:send():375] send: artifact
+2023-05-13 15:32:44,092 INFO    Thread-17 :36638 [dir_watcher.py:_on_file_modified():295] file/dir modified: /home2/debashish.roy/CondensedMovies/wandb/run-20230513_151856-4olbjp0t/files/output.log

@@ -22,11 +22,9 @@
             //     "PYTHONPATH": "${workspaceFolder}"
             // },
             "args": [
-                "configs/moe.json"
-                //"--resume",
-                //"/home2/debashish.roy/CondensedMovies/FRS___/models/MoEE/0513_065958/model_best.pth"
-                //"/home2/debashish.roy/CondensedMovies/FRS___/models/MoEE/FRS_VS+lr=0.00003+bs=128+es=5/model_best.pth"
-
+                //"configs/moe.json"
+                "--resume",
+                "/home2/debashish.roy/CondensedMovies/FRSSV_-lr=3e-5+val_loss_medR/models/MoEE/0514_151410/model_best.pth"
             ]
         },
         // {

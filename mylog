@@ -1,10 +1,12 @@
-Traceback (most recent call last):
-  File "/home2/debashish.roy/miniconda3/envs/IS/bin/jupyter-notebook", line 5, in <module>
-    from notebook.notebookapp import main
-  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/notebook/notebookapp.py", line 43, in <module>
-    from jinja2 import Environment, FileSystemLoader
-  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/jinja2/__init__.py", line 8, in <module>
-    from .environment import Environment as Environment
-  File "/home2/debashish.roy/miniconda3/envs/IS/lib/python3.7/site-packages/jinja2/environment.py", line 14, in <module>
-    from markupsafe import Markup
-ModuleNotFoundError: No module named 'markupsafe'
+[I 16:03:17.135 NotebookApp] Serving notebooks from local directory: /home2/debashish.roy/CondensedMovies
+[I 16:03:17.135 NotebookApp] Jupyter Notebook 6.5.3 is running at:
+[I 16:03:17.135 NotebookApp] http://gnode012:8484/?token=01136463d4f23150152ec35af3438c40de4ad9182adda1f0
+[I 16:03:17.135 NotebookApp]  or http://127.0.0.1:8484/?token=01136463d4f23150152ec35af3438c40de4ad9182adda1f0
+[I 16:03:17.135 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:03:17.149 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///home2/debashish.roy/.local/share/jupyter/runtime/nbserver-2321-open.html
+    Or copy and paste one of these URLs:
+        http://gnode012:8484/?token=01136463d4f23150152ec35af3438c40de4ad9182adda1f0
+     or http://127.0.0.1:8484/?token=01136463d4f23150152ec35af3438c40de4ad9182adda1f0
